@@ -1,0 +1,143 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import Link from "next/link";
+import { KeywordPill } from "@/components/ui/KeywordPill";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import type { DeploymentType } from "@/types/content";
+
+type HomeDeploymentCarouselSectionProps = {
+  items: DeploymentType[];
+};
+
+export function HomeDeploymentCarouselSection({
+  items,
+}: HomeDeploymentCarouselSectionProps) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const extendedItems = useMemo(() => {
+    if (items.length === 0) return [];
+    const last = items[items.length - 1];
+    const first = items[0];
+    return [last, ...items, first];
+  }, [items]);
+
+  function goPrevious() {
+    setActiveIndex((current) => (current === 0 ? items.length - 1 : current - 1));
+  }
+
+  function goNext() {
+    setActiveIndex((current) => (current === items.length - 1 ? 0 : current + 1));
+  }
+
+  return (
+    <section className="border-t border-black/10 bg-white">
+      <div className="mx-auto max-w-shell px-6 py-20 lg:px-10 lg:py-28">
+        <SectionHeading
+          eyebrow="Deployment Types"
+          title="Built for new environments."
+          description="As an appliance, Solar Waves can adapt to many different environments. Given the adjustable support system logic, the same deployment strategies and product can be used on land, over canals, on water and more."
+        />
+      </div>
+
+      <div className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 overflow-hidden">
+        <div className="relative flex w-screen items-center justify-center px-0">
+          <button
+            type="button"
+            onClick={goPrevious}
+            aria-label="Previous deployment type"
+            className="absolute left-6 top-[29%] z-20 inline-flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black text-xl text-white transition hover:bg-black/90 lg:left-8 lg:h-14 lg:w-14 lg:text-2xl"
+          >
+            ←
+          </button>
+
+          <div className="w-screen overflow-hidden">
+            <div
+              className="flex items-start gap-6 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+              style={{
+                transform: `translateX(calc(50vw - ${activeIndex + 1} * (min(62vw, 1320px) + 1.5rem) - min(31vw, 660px)))`,
+              }}
+            >
+              {extendedItems.map((item, index) => {
+                const realIndex =
+                  index === 0
+                    ? items.length - 1
+                    : index === extendedItems.length - 1
+                    ? 0
+                    : index - 1;
+
+                const isActive = realIndex === activeIndex;
+
+                return (
+                  <div
+                    key={`${item.slug}-${index}`}
+                    className="shrink-0 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                    style={{
+                      width: "min(62vw, 1320px)",
+                    }}
+                  >
+                    <div
+                      className={`overflow-hidden rounded-t-4xl border border-black bg-white shadow-soft transition-opacity duration-700 ${
+                        isActive ? "opacity-100" : "opacity-45"
+                      }`}
+                      style={{
+                        aspectRatio: "16 / 11",
+                      }}
+                    >
+                      <div
+                        className="h-full w-full bg-cover bg-center"
+                        style={{ backgroundImage: `url('${item.heroImage}')` }}
+                      />
+                    </div>
+
+                    {isActive ? (
+                      <div className="rounded-b-4xl bg-black px-4 py-3 text-white sm:px-5 sm:py-4 lg:px-6 lg:py-5">
+                        <div className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/66">
+                          {item.metrics[0]}
+                        </div>
+
+                        <h3 className="mt-2 text-2xl font-medium tracking-tight text-white sm:text-3xl lg:text-4xl">
+                          {item.title}
+                        </h3>
+
+                        <p className="mt-2 max-w-2xl text-sm leading-6 text-white/80 lg:text-base lg:leading-7">
+                          {item.subtitle}
+                        </p>
+
+                        <div className="mt-3 flex flex-wrap gap-2">
+                          {item.keywords.map((keyword) => (
+                            <KeywordPill key={keyword}>{keyword}</KeywordPill>
+                          ))}
+                        </div>
+
+                        <div className="mt-5">
+                          <Link
+                            href="/deployment-types"
+                            className="inline-flex rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black transition hover:bg-white/90"
+                          >
+                            View Deployment Types
+                          </Link>
+                        </div>
+                      </div>
+                    ) : null}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onClick={goNext}
+            aria-label="Next deployment type"
+            className="absolute right-6 top-[29%] z-20 inline-flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black text-xl text-white transition hover:bg-black/90 lg:right-8 lg:h-14 lg:w-14 lg:text-2xl"
+          >
+            →
+          </button>
+        </div>
+      </div>
+
+      <div className="h-12 lg:h-14" />
+    </section>
+  );
+}
