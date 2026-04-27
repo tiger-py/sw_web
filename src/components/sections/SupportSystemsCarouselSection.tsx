@@ -8,6 +8,9 @@ type SupportSystemsCarouselSectionProps = {
   items: SupportSystem[];
 };
 
+const slideWidth = "clamp(320px, 58vw, 1040px)";
+const halfSlideWidth = "clamp(160px, 29vw, 520px)";
+
 export function SupportSystemsCarouselSection({
   items,
 }: SupportSystemsCarouselSectionProps) {
@@ -30,11 +33,11 @@ export function SupportSystemsCarouselSection({
 
   return (
     <section className="border-t border-black/10 bg-sw-panel">
-      <div className="mx-auto max-w-shell px-6 py-20 lg:px-10 lg:py-28">
+      <div className="mx-auto max-w-shell px-6 py-12 lg:px-10 lg:py-16">
         <SectionHeading
           eyebrow="Adjustable Support Systems"
-          title="The same appliance. Different support logic."
-          description="The basic design of Solar Waves is to connect to different support systems, without changing its core design and deployment logic."
+          title="The appliance stays consistent. The support adapts."
+          description="Different sites require different interfaces. Solar Waves separates the repeatable power appliance from the site-specific support condition, allowing rail, suspended, elevated, canopy, ground, or floating systems to serve the same underlying deployment logic."
         />
       </div>
 
@@ -53,7 +56,7 @@ export function SupportSystemsCarouselSection({
             <div
               className="flex items-start gap-6 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
               style={{
-                transform: `translateX(calc(50vw - ${activeIndex + 1} * (min(62vw, 1320px) + 1.5rem) - min(31vw, 660px)))`,
+                transform: `translateX(calc(50vw - ${activeIndex + 1} * (${slideWidth} + 1.5rem) - ${halfSlideWidth}))`,
               }}
             >
               {extendedItems.map((item, index) => {
@@ -71,7 +74,7 @@ export function SupportSystemsCarouselSection({
                     key={`${item.name}-${index}`}
                     className="shrink-0 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
                     style={{
-                      width: "min(62vw, 1320px)",
+                      width: slideWidth,
                     }}
                   >
                     <div
@@ -79,7 +82,7 @@ export function SupportSystemsCarouselSection({
                         isActive ? "opacity-100" : "opacity-45"
                       }`}
                       style={{
-                        aspectRatio: "16 / 11",
+                        aspectRatio: "16 / 9",
                       }}
                     >
                       <div
@@ -91,7 +94,7 @@ export function SupportSystemsCarouselSection({
                     {isActive ? (
                       <div className="rounded-b-4xl bg-black px-4 py-3 text-white sm:px-5 sm:py-4 lg:px-6 lg:py-5">
                         <div className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/66">
-                          Support Type
+                          Support Interface
                         </div>
 
                         <h3 className="mt-2 text-2xl font-medium tracking-tight text-white sm:text-3xl lg:text-4xl">
@@ -129,7 +132,7 @@ export function SupportSystemsCarouselSection({
         </div>
       </div>
 
-      <div className="h-12 lg:h-14" />
+      <div className="h-8 lg:h-10" />
     </section>
   );
 }

@@ -10,15 +10,15 @@ type DeploymentCarouselProps = {
 function getKindLabel(kind: DeploymentSlide["kind"]) {
   switch (kind) {
     case "hero":
-      return "Hero";
+      return "Deployment model";
     case "deployed":
-      return "Deployed";
+      return "In the field";
     case "maintenance":
-      return "Maintenance";
+      return "Access + maintenance";
     case "support":
-      return "Support";
+      return "Support interface";
     case "detail":
-      return "Detail";
+      return "System detail";
     default:
       return "";
   }

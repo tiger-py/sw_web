@@ -2,17 +2,17 @@ import type { DownloadItem, MetricItem } from "@/types/content";
 
 export const technicalIntro = {
   eyebrow: "Technical Data",
-  title: "Core specifications and deployment logic",
+  title: "Technical foundation of the Solar Waves appliance",
   description:
-    "A compact technical overview of the Solar Waves appliance, its deployment logic, and its support-system fit.",
+    "Solar Waves is designed as pre-manufactured solar power infrastructure: an integrated appliance combining structure, power surface, wiring logic, transport format, and support-system compatibility. The purpose is practical: reduce field complexity, improve deployment repeatability, and make solar easier to roll out across diverse infrastructure conditions.",
 };
 
 export const technicalMetrics: MetricItem[] = [
   { value: "50kW", label: "Unit output" },
   { value: "1000V DC", label: "Voltage" },
-  { value: "21.5%", label: "Efficiency" },
-  { value: "~2,500kg", label: "Weight" },
-  { value: "6m × 2.4m", label: "Unit dimensions" },
+  { value: "21.5%", label: "Module efficiency" },
+  { value: "~2,500kg", label: "Approximate unit weight" },
+  { value: "6m × 2.4m", label: "Transport dimensions" },
   { value: "CAT 5", label: "Wind rating" },
 ];
 
@@ -20,28 +20,28 @@ export const technicalFeatureGroups = [
   {
     title: "Appliance architecture",
     items: [
-      "Factory-built",
-      "Pre-assembled",
-      "Pre-wired",
-      "Plug-and-play",
+      "Factory-built power unit",
+      "Integrated structure and power surface",
+      "Pre-wired before delivery",
+      "Designed as a deployable infrastructure appliance",
     ],
   },
   {
     title: "Deployment logic",
     items: [
-      "Rapid deployment",
-      "Containerised transport",
-      "Reduced field labour",
-      "Fast commissioning",
+      "Containerized transport",
+      "Reduced field assembly",
+      "Rapid site positioning",
+      "Repeatable support-system interfaces",
     ],
   },
   {
     title: "Operation",
     items: [
-      "Zero moving parts",
-      "Self-cleaning",
+      "Reduced mechanical complexity",
+      "Integrated cable pathways",
       "Optional battery integration",
-      "Low-maintenance operation",
+      "Low-maintenance infrastructure operation",
     ],
   },
 ];
@@ -49,7 +49,7 @@ export const technicalFeatureGroups = [
 export const technicalTransportMetrics: MetricItem[] = [
   { value: "2", label: "Units / 6 m container" },
   { value: "4", label: "Units / 12 m container" },
-  { value: "Minutes", label: "Deploy" },
+  { value: "Minutes", label: "Deployment sequence" },
 ];
 
 export const supportSystemFit = [
@@ -58,6 +58,7 @@ export const supportSystemFit = [
   "Rail systems over canals",
   "Suspended cable systems",
   "Floating configurations",
+  "Canopy support structures",
 ];
 
 export const downloads: DownloadItem[] = [

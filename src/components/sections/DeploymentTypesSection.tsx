@@ -15,7 +15,8 @@ export function DeploymentTypesSection({
       <div className="mx-auto max-w-shell px-6 py-20 lg:px-10 lg:py-28">
         <SectionHeading
           eyebrow="Deployment Types"
-          title="Built for new environments."
+          title="Built for places conventional solar struggles to reach."
+          description="Solar Waves is designed for infrastructure settings where speed, access, land use, and site constraints matter. The core appliance remains repeatable while the support system adapts to canals, water bodies, agricultural land, car parks, remote industrial sites, and open ground."
         />
 
         <div className="mt-12 grid gap-5 lg:grid-cols-2">
@@ -38,6 +39,9 @@ export function DeploymentTypesSection({
                 <div className="mt-2 text-3xl font-medium tracking-tight text-white lg:text-4xl">
                   {item.title}
                 </div>
+                <p className="mt-3 max-w-2xl text-base leading-7 text-white/80">
+                  {item.subtitle}
+                </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {item.keywords.map((keyword) => (
                     <KeywordPill key={keyword}>{keyword}</KeywordPill>

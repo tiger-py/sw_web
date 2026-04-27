@@ -2,9 +2,9 @@ import type { NavItem } from "@/types/content";
 
 export const siteConfig = {
   name: "Solar Waves",
-  title: "Solar Waves — Utility-scale solar, re-engineered",
+  title: "Solar Waves — Solar power infrastructure, manufactured as an appliance",
   description:
-    "A factory-built solar appliance for rapid deployment in new environments.",
+    "Pre-manufactured solar power infrastructure: factory-built, pre-wired, transportable, and designed for repeatable deployment across canals, land, water, parking, agriculture, and remote sites.",
 };
 
 export const mainNav: NavItem[] = [

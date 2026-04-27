@@ -10,15 +10,15 @@ type TechnologyCarouselProps = {
 function getKindLabel(kind: TechnologySlide["kind"]) {
   switch (kind) {
     case "factory":
-      return "Factory";
+      return "Factory production";
     case "transport":
-      return "Transport";
+      return "Transport logic";
     case "deployment":
-      return "Deployment";
+      return "Field deployment";
     case "support":
-      return "Support";
+      return "Support interface";
     case "detail":
-      return "Detail";
+      return "System detail";
     case "operation":
       return "Operation";
     default:

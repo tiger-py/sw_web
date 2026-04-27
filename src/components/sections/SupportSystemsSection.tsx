@@ -12,9 +12,9 @@ export function SupportSystemsSection({
     <section className="border-t border-black/10 bg-white">
       <div className="mx-auto max-w-shell px-6 py-20 lg:px-10 lg:py-28">
         <SectionHeading
-          eyebrow="Adjustable support systems"
-          title="The same solar appliance, configured for different environments."
-          description="Technical renderings should do the explanation. The PV body stays constant. The support logic changes."
+          eyebrow="Adjustable Support Systems"
+          title="One appliance. Multiple infrastructure interfaces."
+          description="The core Solar Waves power unit remains repeatable while the support system adapts to the site. Ground footings, elevated frames, rail systems, suspended cables, canopy structures, and floating supports become different ways to deploy the same appliance logic."
         />
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">

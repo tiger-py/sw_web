@@ -12,7 +12,8 @@ export function ProofSection({ metrics }: ProofSectionProps) {
       <div className="mx-auto max-w-shell px-6 py-20 lg:px-10 lg:py-24">
         <SectionHeading
           eyebrow="Proof"
-          title="Proven in deployment."
+          title="Built for infrastructure-scale deployment."
+          description="Solar Waves is designed around the practical realities that decide whether solar infrastructure can be repeated: transport, lifting, support connection, wind performance, access, and operation."
         />
 
         <div className="mt-10 grid gap-5 sm:grid-cols-3">

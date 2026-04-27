@@ -14,16 +14,16 @@ export function HeroSection({ content }: HeroSectionProps) {
       />
 
       <div className="relative mx-auto flex w-full max-w-shell flex-col px-6 pb-16 pt-32 lg:px-10 lg:pb-24">
-        <div className="max-w-3xl">
+        <div className="max-w-5xl">
           <div className="mb-5 text-sm font-medium uppercase tracking-eyebrow text-white">
             {content.eyebrow}
           </div>
 
-          <h1 className="max-w-4xl text-5xl font-medium tracking-tight text-white sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-5xl text-5xl font-medium tracking-tight text-white sm:text-6xl lg:text-7xl">
             {content.title}
           </h1>
 
-          <p className="mt-6 max-w-2xl text-xl leading-8 text-white">
+          <p className="mt-6 max-w-3xl text-xl leading-8 text-white">
             {content.subtitle}
           </p>
 

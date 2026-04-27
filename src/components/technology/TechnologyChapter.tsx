@@ -5,15 +5,20 @@ import { TechnologyMetricStrip } from "./TechnologyMetricStrip";
 
 type TechnologyChapterProps = {
   item: TechnologyChapterType;
+  isFirst?: boolean;
 };
 
-export function TechnologyChapter({ item }: TechnologyChapterProps) {
+export function TechnologyChapter({ item, isFirst = false }: TechnologyChapterProps) {
   return (
     <section
       id={item.slug}
-      className="border-t border-black/10 bg-white scroll-mt-24"
+      className={`${isFirst ? "" : "border-t border-black/10"} bg-white scroll-mt-24`}
     >
-      <div className="mx-auto max-w-shell px-6 py-16 lg:px-10 lg:py-24">
+      <div
+        className={`mx-auto max-w-shell px-6 lg:px-10 ${
+          isFirst ? "pt-8 pb-16 lg:pt-10 lg:pb-24" : "py-16 lg:py-24"
+        }`}
+      >
         <div className="mb-10 grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div>
             {item.eyebrow ? (

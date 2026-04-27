@@ -6,34 +6,36 @@ import type {
 } from "@/types/content";
 
 export const homeHero: HeroContent = {
-  eyebrow: "Utility-scale solar for new site types",
-  title: "Solar power delivered as an appliance.",
+  eyebrow: "A new industrial model for solar deployment",
+  title: "Solar power infrastructure, manufactured as an appliance.",
   subtitle:
-    "Solar Waves is a factory-built solar appliance designed for canals, agricultural land, parking, and remote sites where speed, access, and site fit matter.",
+    "Solar Waves changes how solar is built. Instead of assembling infrastructure piece by piece in the field, each unit is manufactured as an integrated solar power appliance: factory-built, pre-wired, transportable, and designed for rapid deployment. The revolutionary shift is not the panel. It is the deployment model — moving complexity from the construction site into the factory.",
   primaryCta: {
-    label: "Explore Solar Waves",
+    label: "Explore the Solar Appliance",
     href: "#appliance",
   },
   secondaryCta: {
-    label: "Contact the Team",
+    label: "Discuss a Deployment",
     href: "/contact",
   },
   image: "/images/hero/hero-canal.webp",
 };
 
 export const applianceMetrics: MetricItem[] = [
-  { value: "50kW", label: "Per unit" },
+  { value: "50kW", label: "Per appliance unit" },
   { value: "2", label: "Units per 6 m container" },
-  { value: "CAT 5", label: "Wind Rating" },
+  { value: "CAT 5", label: "Wind rating" },
 ];
 
 export const featuredDeploymentTypes: DeploymentType[] = [
   {
     slug: "over-canals",
     title: "Over Canals",
-    subtitle: "Solar for irrigation canals and water corridors.",
+    subtitle:
+      "Turn irrigation canals and water corridors into productive solar infrastructure while maintaining access and waterway function.",
     keywords: [
       "Rail Support System",
+      "Cable-Suspended Deployment",
       "Fold-Back Access",
       "Water Corridor Deployment",
     ],
@@ -44,11 +46,12 @@ export const featuredDeploymentTypes: DeploymentType[] = [
   {
     slug: "floating-solar",
     title: "Floating Solar",
-    subtitle: "Solar deployment on reservoirs and other water surfaces.",
+    subtitle:
+      "Extend the Solar Waves appliance model onto reservoirs, ponds, and controlled water bodies using buoyant support logic.",
     keywords: [
       "Floating Support System",
-      "Pontoon Deployment",
-      "Water Surface Installation",
+      "Buoyant Deployment",
+      "Water Surface Infrastructure",
     ],
     metrics: ["Floating Deployment"],
     heroImage: "/images/deployments/deployment-floating-solar-hero.webp",
@@ -57,7 +60,8 @@ export const featuredDeploymentTypes: DeploymentType[] = [
   {
     slug: "agrivoltaics",
     title: "Agrivoltaics",
-    subtitle: "Solar that works with productive agricultural land.",
+    subtitle:
+      "Introduce solar above productive land while maintaining crop access, shade strategy, and agricultural function.",
     keywords: [
       "Elevated Agricultural Support System",
       "Productive Land Use",
@@ -70,7 +74,8 @@ export const featuredDeploymentTypes: DeploymentType[] = [
   {
     slug: "car-parks",
     title: "Car Parks",
-    subtitle: "Solar structures for parking, shade, and site value.",
+    subtitle:
+      "Convert parking areas into power-generating infrastructure with shade, weather protection, and future charging potential.",
     keywords: [
       "Canopy Support System",
       "Weather Protection",
@@ -83,11 +88,12 @@ export const featuredDeploymentTypes: DeploymentType[] = [
   {
     slug: "ev-charging-stations",
     title: "EV Charging Stations",
-    subtitle: "Solar structures built for charging-oriented sites.",
+    subtitle:
+      "Combine solar generation, structural cover, and charging infrastructure in one repeatable deployment surface.",
     keywords: [
       "EV Charging Integration",
       "Canopy Support System",
-      "Customer-Facing Infrastructure",
+      "Distributed Charging Infrastructure",
     ],
     metrics: ["Charging Deployment"],
     heroImage: "/images/deployments/deployment-ev-charging-hero.webp",
@@ -96,11 +102,12 @@ export const featuredDeploymentTypes: DeploymentType[] = [
   {
     slug: "ground-mount",
     title: "Ground-Mount",
-    subtitle: "Fast field deployment where open land is available.",
+    subtitle:
+      "Reduce field assembly on open land with a faster, more repeatable pathway for utility-scale solar rollout.",
     keywords: [
       "Ground Support System",
       "Utility-Scale Rollout",
-      "Reduced Site Work",
+      "Reduced Field Assembly",
     ],
     metrics: ["Ground Deployment"],
     heroImage: "/images/deployments/deployment-ground-mount-hero.webp",
@@ -109,10 +116,11 @@ export const featuredDeploymentTypes: DeploymentType[] = [
   {
     slug: "mobile-power",
     title: "Mobile Power",
-    subtitle: "Foldable, transportable solar for remote and temporary sites.",
+    subtitle:
+      "Redeployable solar power infrastructure for temporary, remote, industrial, and containerized power applications.",
     keywords: [
       "Mobile Support System",
-      "Containerised Transport",
+      "Containerized Transport",
       "Redeployable Power",
     ],
     metrics: ["Mobile Deployment"],
@@ -124,45 +132,51 @@ export const featuredDeploymentTypes: DeploymentType[] = [
 export const supportSystems: SupportSystem[] = [
   {
     name: "Rail Support System",
-    detail: "For canal-top rollout and guided access.",
+    detail:
+      "For canal-top rollout, guided positioning, maintenance access, and repeatable deployment across linear infrastructure.",
     image: "/images/support-systems/support-rail-main.webp",
   },
   {
     name: "Suspended Cable Support System",
-    detail: "For elevated span conditions across constrained corridors.",
+    detail:
+      "For spanning constrained corridors where the appliance needs to remain repeatable while the support interface adapts.",
     image: "/images/support-systems/support-suspended-main.webp",
   },
   {
     name: "Floating Support System",
-    detail: "For reservoirs and other water-surface deployments.",
+    detail:
+      "For reservoirs, ponds, and controlled water surfaces using buoyant infrastructure interfaces.",
     image: "/images/support-systems/support-floating-main.webp",
   },
   {
     name: "Elevated Agricultural Support System",
-    detail: "For agrivoltaics, vineyards, and productive land.",
+    detail:
+      "For agrivoltaics, vineyards, greenhouses, and productive land where access and shade strategy matter.",
     image: "/images/support-systems/support-elevated-main.webp",
   },
   {
     name: "Ground Support System",
-    detail: "For fast utility-scale field deployment.",
+    detail:
+      "For fast utility-scale deployment where the appliance model reduces field assembly and improves repeatability.",
     image: "/images/support-systems/support-grounded-main.webp",
   },
   {
     name: "Canopy Support System",
-    detail: "For parking and EV charging structures.",
+    detail:
+      "For car parks, EV charging nodes, service areas, and built-environment power surfaces.",
     image: "/images/support-systems/support-canopy-main.webp",
   },
 ];
 
 export const technologyPreview = {
   eyebrow: "Technology",
-  title: "From factory to field.",
+  title: "From solar construction to solar manufacturing.",
   description:
-    "Solar Waves is designed as a factory-built system that is easier to transport, faster to deploy, and simpler to repeat across different project types.",
+    "Solar Waves moves more of the solar system into controlled factory production. Assembly, wiring, structural integration, transport preparation, and quality control happen before the unit reaches site. The result is solar infrastructure that can be manufactured, transported, deployed, and repeated.",
   image: "/images/technology/technology-preview.gif",
   chapters: [
     "Factory-Built Production",
-    "Containerised Transport",
+    "Containerized Transport",
     "Rapid Site Deployment",
     "Adjustable Support Systems",
     "Low-Maintenance Operation",
@@ -177,8 +191,8 @@ export const technicalPreviewMetrics: MetricItem[] = [
 
 export const technicalPreview = {
   eyebrow: "Technical Data",
-  title: "Core specifications and deployment logic.",
+  title: "The technical foundation of the Solar Waves appliance.",
   description:
-    "Review the main technical points, transport format, support-system fit, and deployment characteristics of the Solar Waves platform.",
+    "Review the unit output, transport format, support-system compatibility, operating logic, and deployment characteristics behind pre-manufactured solar power infrastructure.",
   image: "/images/technical-data/technical-spec-render-main.webp",
 };

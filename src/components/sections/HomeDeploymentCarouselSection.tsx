@@ -10,6 +10,9 @@ type HomeDeploymentCarouselSectionProps = {
   items: DeploymentType[];
 };
 
+const slideWidth = "clamp(320px, 58vw, 1040px)";
+const halfSlideWidth = "clamp(160px, 29vw, 520px)";
+
 export function HomeDeploymentCarouselSection({
   items,
 }: HomeDeploymentCarouselSectionProps) {
@@ -32,11 +35,11 @@ export function HomeDeploymentCarouselSection({
 
   return (
     <section className="border-t border-black/10 bg-white">
-      <div className="mx-auto max-w-shell px-6 py-20 lg:px-10 lg:py-28">
+      <div className="mx-auto max-w-shell px-6 py-12 lg:px-10 lg:py-16">
         <SectionHeading
           eyebrow="Deployment Types"
-          title="Built for new environments."
-          description="As an appliance, Solar Waves can adapt to many different environments. Given the adjustable support system logic, the same deployment strategies and product can be used on land, over canals, on water and more."
+          title="One solar appliance for many infrastructure environments."
+          description="The Solar Waves appliance stays repeatable while the infrastructure interface adapts. The same core product logic can serve canals, reservoirs, agricultural land, car parks, charging stations, remote sites, and ground-mount projects."
         />
       </div>
 
@@ -55,7 +58,7 @@ export function HomeDeploymentCarouselSection({
             <div
               className="flex items-start gap-6 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
               style={{
-                transform: `translateX(calc(50vw - ${activeIndex + 1} * (min(62vw, 1320px) + 1.5rem) - min(31vw, 660px)))`,
+                transform: `translateX(calc(50vw - ${activeIndex + 1} * (${slideWidth} + 1.5rem) - ${halfSlideWidth}))`,
               }}
             >
               {extendedItems.map((item, index) => {
@@ -73,7 +76,7 @@ export function HomeDeploymentCarouselSection({
                     key={`${item.slug}-${index}`}
                     className="shrink-0 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
                     style={{
-                      width: "min(62vw, 1320px)",
+                      width: slideWidth,
                     }}
                   >
                     <div
@@ -81,7 +84,7 @@ export function HomeDeploymentCarouselSection({
                         isActive ? "opacity-100" : "opacity-45"
                       }`}
                       style={{
-                        aspectRatio: "16 / 11",
+                        aspectRatio: "16 / 9",
                       }}
                     >
                       <div
@@ -137,7 +140,7 @@ export function HomeDeploymentCarouselSection({
         </div>
       </div>
 
-      <div className="h-12 lg:h-14" />
+      <div className="h-8 lg:h-10" />
     </section>
   );
 }

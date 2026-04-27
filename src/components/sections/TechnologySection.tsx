@@ -12,7 +12,8 @@ export function TechnologySection({ tags }: TechnologySectionProps) {
         <div className="mb-12 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <SectionHeading
             eyebrow="Technology"
-            title="Engineered for deployment."
+            title="From solar construction to solar manufacturing."
+            description="Solar Waves moves more of the solar system into factory production: assembly, wiring, structural integration, transport preparation, and quality control before the unit reaches site."
           />
 
           <div className="flex flex-wrap gap-2 lg:justify-end">

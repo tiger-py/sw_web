@@ -25,12 +25,12 @@ export function ApplianceRevealSection({
         <div className="mt-10 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
           <SectionHeading
             eyebrow="Solar Appliance"
-            title="Solar Waves, a fold-out solar power appliance. "
-            description="Factory-built, pre-wired and delivered as an integrated solar appliance rather than a labour-heavy field-built assembly."
+            title="A solar power appliance built before it reaches the site."
+            description="Solar Waves transforms solar from a site-built assembly into a pre-manufactured infrastructure product. Structure, power surface, wiring logic, transport format, and deployment sequence are designed together as one integrated appliance."
           />
 
           <div className="lg:justify-self-end">
-            <ButtonLink href="/technology">Explore Technology</ButtonLink>
+            <ButtonLink href="/technology">Explore the Technology</ButtonLink>
           </div>
         </div>
 
