@@ -17,7 +17,7 @@ export function TechnologyPreviewSection({
   chapters,
 }: TechnologyPreviewSectionProps) {
   return (
-    <section className="border-t border-black/10 bg-white">
+    <section className="border-t border-black/10 bg-sw-panel">
       <div className="mx-auto grid max-w-shell gap-10 px-6 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-10 lg:py-24 lg:items-start">
         <div className="max-w-2xl">
           <SectionHeading
@@ -42,7 +42,7 @@ export function TechnologyPreviewSection({
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-4xl border border-black/10 bg-sw-panel shadow-soft">
+        <div className="overflow-hidden rounded-4xl border border-black/10 bg-white shadow-soft">
           <div
             className="aspect-[16/9] w-full bg-cover bg-center"
             style={{ backgroundImage: `url('${image}')` }}

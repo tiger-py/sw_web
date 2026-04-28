@@ -27,7 +27,6 @@ export default function HomePage() {
       <HeroSection content={homeHero} />
       <ApplianceRevealSection metrics={applianceMetrics} />
       <HomeDeploymentCarouselSection items={featuredDeploymentTypes} />
-      <SupportSystemsCarouselSection items={supportSystems} />
       <TechnologyPreviewSection
         eyebrow={technologyPreview.eyebrow}
         title={technologyPreview.title}
@@ -35,6 +34,7 @@ export default function HomePage() {
         image={technologyPreview.image}
         chapters={technologyPreview.chapters}
       />
+      <SupportSystemsCarouselSection items={supportSystems} />
       <TechnicalPreviewSection
         eyebrow={technicalPreview.eyebrow}
         title={technicalPreview.title}

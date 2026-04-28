@@ -32,7 +32,7 @@ export function SupportSystemsCarouselSection({
   }
 
   return (
-    <section className="border-t border-black/10 bg-sw-panel">
+    <section className="border-t border-black/10 bg-white">
       <div className="mx-auto max-w-shell px-6 py-12 lg:px-10 lg:py-16">
         <SectionHeading
           eyebrow="Adjustable Support Systems"
