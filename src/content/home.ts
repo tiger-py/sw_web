@@ -131,6 +131,12 @@ export const featuredDeploymentTypes: DeploymentType[] = [
 
 export const supportSystems: SupportSystem[] = [
   {
+    name: "Ground Support System",
+    detail:
+      "For fast utility-scale deployment where the appliance model reduces field assembly and improves repeatability.",
+    image: "/images/support-systems/support-grounded-main.webp",
+  },
+  {
     name: "Rail Support System",
     detail:
       "For canal-top rollout, guided positioning, maintenance access, and repeatable deployment across linear infrastructure.",
@@ -154,12 +160,7 @@ export const supportSystems: SupportSystem[] = [
       "For agrivoltaics, vineyards, greenhouses, and productive land where access and shade strategy matter.",
     image: "/images/support-systems/support-elevated-main.webp",
   },
-  {
-    name: "Ground Support System",
-    detail:
-      "For fast utility-scale deployment where the appliance model reduces field assembly and improves repeatability.",
-    image: "/images/support-systems/support-grounded-main.webp",
-  },
+
   {
     name: "Canopy Support System",
     detail:
