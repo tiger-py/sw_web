@@ -1,6 +1,7 @@
 import { DeploymentChapter } from "@/components/deployment/DeploymentChapter";
 import { deploymentTypes } from "@/content/deploymentTypes";
 import { buildMetadata } from "@/lib/seo";
+import { FinalCTASection } from "@/components/sections/FinalCTASection";
 
 export const metadata = buildMetadata(
   "Deployment Types",
@@ -17,6 +18,7 @@ export default function DeploymentTypesPage() {
           isFirst={index === 0}
         />
       ))}
+      <FinalCTASection />
     </main>
   );
 }

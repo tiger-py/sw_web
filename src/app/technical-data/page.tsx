@@ -1,4 +1,4 @@
-import { ButtonLink } from "@/components/ui/ButtonLink";
+import { FinalCTASection } from "@/components/sections/FinalCTASection";
 import {
   downloads,
   supportSystemFit,
@@ -13,22 +13,46 @@ export const metadata = buildMetadata(
   "Core specifications and deployment logic for Solar Waves."
 );
 
+const operationFeatures = [
+  "Self-cleaning",
+  "Rainwater-based cleaning",
+  "Zero moving parts",
+  "Optional battery integration",
+  "Low-maintenance operation",
+];
+
 export default function TechnicalDataPage() {
   return (
-    <main className="min-h-screen bg-white pt-28 text-sw-text">
-      <section className="border-b border-black/10 bg-white">
-        <div className="mx-auto max-w-shell px-6 py-16 lg:px-10 lg:py-24">
-          <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
-            {technicalIntro.eyebrow}
+    <main className="min-h-screen bg-white text-sw-text">
+      <section className="relative flex min-h-[72vh] items-end overflow-hidden bg-black text-white">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-65"
+          style={{
+            backgroundImage:
+              "url('/images/backgrounds/technical-data-header.webp')",
+          }}
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
+        <div
+          className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/60 to-transparent"
+          aria-hidden="true"
+        />
+
+        <div className="relative mx-auto w-full max-w-shell px-6 py-20 lg:px-10 lg:py-28">
+          <div className="max-w-5xl">
+            <div className="mb-5 text-sm font-medium uppercase tracking-eyebrow text-white">
+              {technicalIntro.eyebrow}
+            </div>
+
+            <h1 className="max-w-5xl text-5xl font-medium tracking-tight text-white sm:text-6xl lg:text-7xl">
+              {technicalIntro.title}
+            </h1>
+
+            <p className="mt-6 max-w-3xl text-xl leading-8 text-white">
+              {technicalIntro.description}
+            </p>
           </div>
-
-          <h1 className="mt-4 max-w-5xl text-5xl font-medium tracking-tight lg:text-6xl">
-            {technicalIntro.title}
-          </h1>
-
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-sw-muted">
-            {technicalIntro.description}
-          </p>
         </div>
       </section>
 
@@ -48,16 +72,18 @@ export default function TechnicalDataPage() {
             />
           </div>
 
-          <div className="mt-10 grid gap-x-10 gap-y-5 lg:grid-cols-2">
+          <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {technicalMetrics.map((metric) => (
               <div
                 key={metric.label}
-                className="flex items-end justify-between gap-6 border-b border-black/10 pb-4"
+                className="rounded-3xl border border-black/10 bg-sw-panel p-6 shadow-soft"
               >
                 <div className="text-3xl font-medium tracking-tight text-sw-text">
                   {metric.value}
                 </div>
-                <div className="text-base text-black/58">{metric.label}</div>
+                <div className="mt-3 text-base leading-6 text-black/58">
+                  {metric.label}
+                </div>
               </div>
             ))}
           </div>
@@ -84,16 +110,18 @@ export default function TechnicalDataPage() {
             />
           </div>
 
-          <div className="mt-10 grid gap-x-10 gap-y-5 lg:grid-cols-3">
+          <div className="mt-14 grid gap-4 lg:grid-cols-3">
             {technicalTransportMetrics.map((metric) => (
               <div
                 key={metric.label}
-                className="border-b border-black/10 pb-4"
+                className="rounded-3xl border border-black/10 bg-white p-6 shadow-soft"
               >
                 <div className="text-3xl font-medium tracking-tight text-sw-text">
                   {metric.value}
                 </div>
-                <div className="mt-2 text-base text-black/58">{metric.label}</div>
+                <div className="mt-3 text-base leading-6 text-black/58">
+                  {metric.label}
+                </div>
               </div>
             ))}
           </div>
@@ -120,11 +148,11 @@ export default function TechnicalDataPage() {
             />
           </div>
 
-          <div className="mt-10 grid gap-x-10 gap-y-4 lg:grid-cols-2">
+          <div className="mt-14 grid gap-4 lg:grid-cols-2">
             {supportSystemFit.map((item) => (
               <div
                 key={item}
-                className="border-b border-black/10 pb-4 text-lg text-sw-muted"
+                className="rounded-3xl border border-black/10 bg-sw-panel p-6 text-lg leading-7 text-sw-muted shadow-soft"
               >
                 {item}
               </div>
@@ -153,20 +181,14 @@ export default function TechnicalDataPage() {
             />
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-2">
-            {[
-              "Self-cleaning",
-              "Rainwater-based cleaning",
-              "Zero moving parts",
-              "Optional battery integration",
-              "Low-maintenance operation",
-            ].map((item) => (
-              <span
+          <div className="mt-14 grid gap-4 lg:grid-cols-2">
+            {operationFeatures.map((item) => (
+              <div
                 key={item}
-                className="rounded-full border border-black/10 bg-white px-3 py-1.5 text-xs uppercase tracking-[0.16em] text-black/70"
+                className="rounded-3xl border border-black/10 bg-white p-6 text-lg leading-7 text-sw-muted shadow-soft"
               >
                 {item}
-              </span>
+              </div>
             ))}
           </div>
         </div>
@@ -201,27 +223,7 @@ export default function TechnicalDataPage() {
         </div>
       </section>
 
-      <section className="bg-white">
-        <div className="mx-auto max-w-shell px-6 py-20 lg:px-10 lg:py-24">
-          <div className="rounded-4xl border border-black/10 bg-sw-panel p-8 shadow-soft lg:p-12">
-            <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
-              Next Step
-            </div>
-            <h2 className="mt-4 text-4xl font-medium tracking-tight text-sw-text lg:text-5xl">
-              Review technical fit
-            </h2>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-sw-muted">
-              Discuss support conditions, deployment requirements, brochures, and
-              technical fit with Solar Waves.
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-4">
-              <ButtonLink href="/contact">Contact the Team</ButtonLink>
-              <ButtonLink href="/deployment-types">View Deployment Types</ButtonLink>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FinalCTASection />
     </main>
   );
 }

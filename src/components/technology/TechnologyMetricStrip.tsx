@@ -10,9 +10,9 @@ export function TechnologyMetricStrip({
       {items.map((item) => (
         <div
           key={item}
-          className="rounded-4xl border border-white/18 bg-black px-6 py-6 shadow-soft"
+          className="rounded-4xl border border-black/10 bg-sw-panel px-6 py-6 shadow-soft"
         >
-          <div className="text-base font-medium uppercase tracking-[0.14em] text-white">
+          <div className="text-base font-medium uppercase tracking-[0.14em] text-sw-text">
             {item}
           </div>
         </div>

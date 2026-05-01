@@ -5,6 +5,7 @@ export const technicalIntro = {
   title: "Technical foundation of the Solar Waves appliance",
   description:
     "Solar Waves is designed as pre-manufactured solar power infrastructure: an integrated appliance combining structure, power surface, wiring logic, transport format, and support-system compatibility. The purpose is practical: reduce field complexity, improve deployment repeatability, and make solar easier to roll out across diverse infrastructure conditions.",
+  backgroundImage: "/images/backgrounds/technical-data-header.webp",
 };
 
 export const technicalMetrics: MetricItem[] = [

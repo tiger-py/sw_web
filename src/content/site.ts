@@ -12,5 +12,6 @@ export const mainNav: NavItem[] = [
   { label: "Deployment Types", href: "/deployment-types" },
   { label: "Technology", href: "/technology" },
   { label: "Technical Data", href: "/technical-data" },
+  { label: "Simulation", href: "/simulation" },
   { label: "Contact", href: "/contact" },
 ];
