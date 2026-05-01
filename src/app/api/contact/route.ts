@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const runtime = "nodejs";
 
 function escapeHtml(value: string) {
   return value
@@ -14,6 +14,23 @@ function escapeHtml(value: string) {
 
 export async function POST(request: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
+      console.error("Missing RESEND_API_KEY environment variable.");
+
+      return NextResponse.json(
+        {
+          ok: false,
+          error:
+            "Contact form is not configured. Missing RESEND_API_KEY environment variable.",
+        },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
+
     const body = await request.json();
 
     const name = String(body.name || "").trim();
@@ -23,7 +40,7 @@ export async function POST(request: Request) {
     const location = String(body.location || "").trim();
     const message = String(body.message || "").trim();
 
-    // Simple honeypot field. Real users should never fill this.
+    // Honeypot field. Real users should never fill this.
     const website = String(body.website || "").trim();
     if (website) {
       return NextResponse.json({ ok: true });
@@ -89,6 +106,8 @@ export async function POST(request: Request) {
     });
 
     if (result.error) {
+      console.error("Resend error:", result.error);
+
       return NextResponse.json(
         { ok: false, error: result.error.message },
         { status: 500 }
