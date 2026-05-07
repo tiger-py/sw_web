@@ -10,7 +10,9 @@ export function MetricCard({ item }: MetricCardProps) {
       <div className="text-3xl font-medium tracking-tight text-white">
         {item.value}
       </div>
-      <div className="mt-3 text-base text-white/80">{item.label}</div>
+      <div className="mt-3 text-lg leading-7 text-white/80">
+        {item.label}
+      </div>
     </div>
   );
 }

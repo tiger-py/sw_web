@@ -18,7 +18,7 @@ export function TechnicalPreviewSection({
 }: TechnicalPreviewSectionProps) {
   return (
     <section className="border-t border-black/10 bg-sw-panel">
-      <div className="mx-auto grid max-w-shell gap-10 px-6 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-10 lg:py-24 lg:items-start">
+      <div className="mx-auto grid max-w-shell gap-10 px-6 py-40 lg:grid-cols-[0.95fr_1.05fr] lg:px-10 lg:py-48 lg:items-start">
         <div className="max-w-2xl">
           <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
             {eyebrow}

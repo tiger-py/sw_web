@@ -29,6 +29,12 @@ export type SupportSystem = {
   image: string;
 };
 
+export type DeploymentFeatureCard = {
+  title: string;
+  description: string;
+  image: string;
+};
+
 export type DeploymentType = {
   slug: string;
   title: string;
@@ -38,6 +44,7 @@ export type DeploymentType = {
   metrics: string[];
   heroImage: string;
   slides: DeploymentSlide[];
+  featureCards: DeploymentFeatureCard[];
 };
 
 export type DeploymentSlide = {
@@ -48,6 +55,12 @@ export type DeploymentSlide = {
 
 export type TechnologyTag = {
   label: string;
+};
+
+export type TechnologyFeatureCard = {
+  title: string;
+  description: string;
+  image: string;
 };
 
 export type DownloadItem = {
@@ -65,6 +78,7 @@ export type TechnologyChapter = {
   metrics: string[];
   heroImage: string;
   slides: TechnologySlide[];
+  featureCards: TechnologyFeatureCard[];
 };
 
 export type TechnologySlide = {

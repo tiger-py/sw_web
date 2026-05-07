@@ -26,38 +26,46 @@ export default function SimulationPage() {
           aria-hidden="true"
         />
 
-        <div className="relative mx-auto flex min-h-[72vh] max-w-shell items-end px-6 py-20 lg:px-10 lg:py-28">
+        <div className="relative mx-auto flex min-h-[72vh] max-w-shell items-end px-6 py-24 lg:px-10 lg:py-32">
           <div className="max-w-5xl">
             <div className="mb-5 text-sm font-medium uppercase tracking-eyebrow text-white">
               {simulationIntro.eyebrow}
             </div>
 
-            <h1 className="text-5xl font-medium tracking-tight sm:text-6xl lg:text-7xl">
-              {simulationIntro.title}
-            </h1>
+            <div className="flex flex-col gap-5 lg:flex-row lg:items-center">
+              <img
+                src="/icons/logo.png"
+                alt="Solar Waves"
+                className="h-auto w-[72px] shrink-0 opacity-95 md:w-[88px] lg:w-[104px]"
+              />
 
-            <p className="mt-6 max-w-3xl text-xl leading-8 text-white">
+              <h1 className="max-w-5xl text-5xl font-medium tracking-tight text-white sm:text-6xl lg:text-7xl">
+                {simulationIntro.title}
+              </h1>
+            </div>
+
+            <p className="mt-6 max-w-4xl text-2xl leading-9 text-white">
               {simulationIntro.description}
             </p>
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-6 py-16 lg:px-10 lg:py-24">
+      <section className="bg-white px-6 py-24 lg:px-10 lg:py-32">
         <div className="mx-auto max-w-shell">
-          <div className="mb-10 max-w-3xl">
+          <div className="mb-12 max-w-4xl">
             <div className="mb-3 text-sm font-medium uppercase tracking-eyebrow text-sw-green">
               How to use the simulation
             </div>
 
-            <h2 className="text-3xl font-medium tracking-tight text-black md:text-5xl">
-              Start with the site, then test the deployment logic.
+            <h2 className="text-5xl font-medium tracking-tight text-black lg:text-6xl">
+              Start with the site.
             </h2>
 
-            <p className="mt-5 text-lg leading-8 text-black/70">
-              Follow the steps below before using the live simulator. The model
+            <p className="mt-6 max-w-3xl text-xl leading-9 text-black/70">
+              Follow the steps below before using the power output and water savings simulator. The model
               is best used as an early-stage planning tool for comparing site
-              conditions, deployment types, and indicative performance.
+              conditions, deployment types, and performance.
             </p>
           </div>
 
@@ -65,17 +73,17 @@ export default function SimulationPage() {
             {simulationSteps.map((step) => (
               <article
                 key={step.value}
-                className="rounded-[1.5rem] border border-black/10 bg-sw-panel p-6"
+                className="rounded-[1.5rem] border border-black/10 bg-sw-panel p-7"
               >
                 <div className="mb-8 text-sm font-medium text-sw-green">
                   {step.value}
                 </div>
 
-                <h3 className="text-xl font-medium text-black">
+                <h3 className="text-2xl font-medium leading-tight text-black">
                   {step.title}
                 </h3>
 
-                <p className="mt-4 text-sm leading-6 text-black/65">
+                <p className="mt-5 text-base leading-7 text-black/65">
                   {step.description}
                 </p>
               </article>
@@ -84,20 +92,20 @@ export default function SimulationPage() {
         </div>
       </section>
 
-      <section className="bg-sw-panel px-6 py-16 lg:px-10 lg:py-20">
+      <section className="bg-sw-panel px-6 py-24 lg:px-10 lg:py-32">
         <div className="mx-auto max-w-shell">
-          <div className="mb-8 max-w-3xl">
+          <div className="mb-10 max-w-4xl">
             <div className="mb-3 text-sm font-medium uppercase tracking-eyebrow text-sw-green">
               Interactive Model
             </div>
 
-            <h2 className="text-3xl font-medium tracking-tight text-black md:text-5xl">
+            <h2 className="text-5xl font-medium tracking-tight text-black lg:text-6xl">
               Power output and water-savings simulation
             </h2>
 
-            <p className="mt-4 text-lg leading-8 text-black/70">
+            <p className="mt-6 max-w-3xl text-xl leading-9 text-black/70">
               Configure the array, select a location, compare deployment
-              conditions, and review indicative performance metrics inside the
+              conditions, and review performance metrics inside the
               live simulator.
             </p>
           </div>
@@ -112,18 +120,18 @@ export default function SimulationPage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-16 lg:px-10 lg:py-24">
-        <div className="mx-auto grid max-w-shell gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+      <section className="bg-white px-6 py-24 lg:px-10 lg:py-32">
+        <div className="mx-auto grid max-w-shell gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <div className="mb-3 text-sm font-medium uppercase tracking-eyebrow text-sw-green">
               {simulationScience.eyebrow}
             </div>
 
-            <h2 className="text-3xl font-medium tracking-tight text-black md:text-5xl">
+            <h2 className="text-5xl font-medium tracking-tight text-black lg:text-6xl">
               {simulationScience.title}
             </h2>
 
-            <p className="mt-5 text-lg leading-8 text-black/70">
+            <p className="mt-6 text-xl leading-9 text-black/70">
               {simulationScience.description}
             </p>
           </div>
@@ -132,13 +140,13 @@ export default function SimulationPage() {
             {simulationScience.sections.map((item) => (
               <article
                 key={item.title}
-                className="rounded-[1.5rem] border border-black/10 bg-sw-panel p-6"
+                className="rounded-[1.5rem] border border-black/10 bg-sw-panel p-7"
               >
-                <h3 className="text-xl font-medium text-black">
+                <h3 className="text-2xl font-medium leading-tight text-black">
                   {item.title}
                 </h3>
 
-                <p className="mt-4 text-sm leading-6 text-black/65">
+                <p className="mt-5 text-base leading-7 text-black/65">
                   {item.body}
                 </p>
               </article>

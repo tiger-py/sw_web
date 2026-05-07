@@ -1,4 +1,3 @@
-import { ApplianceRevealSection } from "@/components/sections/ApplianceRevealSection";
 import { FinalCTASection } from "@/components/sections/FinalCTASection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { HomeDeploymentCarouselSection } from "@/components/sections/HomeDeploymentCarouselSection";
@@ -6,7 +5,6 @@ import { SupportSystemsCarouselSection } from "@/components/sections/SupportSyst
 import { TechnicalPreviewSection } from "@/components/sections/TechnicalPreviewSection";
 import { TechnologyPreviewSection } from "@/components/sections/TechnologyPreviewSection";
 import {
-  applianceMetrics,
   featuredDeploymentTypes,
   homeHero,
   supportSystems,
@@ -18,14 +16,13 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata(
   "Solar Waves",
-  "A cinematic product experience for Solar Waves."
+  "A solar power revolution."
 );
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-sw-text">
       <HeroSection content={homeHero} />
-      <ApplianceRevealSection metrics={applianceMetrics} />
       <HomeDeploymentCarouselSection items={featuredDeploymentTypes} />
       <TechnologyPreviewSection
         eyebrow={technologyPreview.eyebrow}

@@ -15,7 +15,7 @@ export const metadata = buildMetadata(
 
 const operationFeatures = [
   "Self-cleaning",
-  "Rainwater-based cleaning",
+  "Rainwater collection",
   "Zero moving parts",
   "Optional battery integration",
   "Low-maintenance operation",
@@ -45,9 +45,17 @@ export default function TechnicalDataPage() {
               {technicalIntro.eyebrow}
             </div>
 
-            <h1 className="max-w-5xl text-5xl font-medium tracking-tight text-white sm:text-6xl lg:text-7xl">
-              {technicalIntro.title}
-            </h1>
+            <div className="flex flex-col gap-5 lg:flex-row lg:items-center">
+              <img
+                src="/icons/logo.png"
+                alt="Solar Waves"
+                className="h-auto w-[72px] shrink-0 opacity-95 md:w-[88px] lg:w-[104px]"
+              />
+
+              <h1 className="max-w-5xl text-5xl font-medium tracking-tight text-white sm:text-6xl lg:text-7xl">
+                {technicalIntro.title}
+              </h1>
+            </div>
 
             <p className="mt-6 max-w-3xl text-xl leading-8 text-white">
               {technicalIntro.description}
@@ -129,67 +137,75 @@ export default function TechnicalDataPage() {
       </section>
 
       <section className="border-b border-black/10 bg-white">
-        <div className="mx-auto max-w-shell px-6 py-16 lg:px-10 lg:py-24">
-          <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
-            Support Systems
-          </div>
-
-          <h2 className="mt-4 text-4xl font-medium tracking-tight text-sw-text lg:text-5xl">
-            One appliance. Multiple support conditions.
-          </h2>
-
-          <div className="mt-8 overflow-hidden rounded-4xl border border-black/10 bg-sw-panel shadow-soft">
-            <div
-              className="aspect-[16/9] w-full bg-cover bg-center"
-              style={{
-                backgroundImage:
-                  "url('/images/technical-data/technical-support-systems-main.webp')",
-              }}
-            />
-          </div>
-
-          <div className="mt-14 grid gap-4 lg:grid-cols-2">
-            {supportSystemFit.map((item) => (
-              <div
-                key={item}
-                className="rounded-3xl border border-black/10 bg-sw-panel p-6 text-lg leading-7 text-sw-muted shadow-soft"
-              >
-                {item}
+        <div className="mx-auto max-w-shell px-6 py-16 lg:px-10 lg:py-20">
+          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+            <div>
+              <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
+                Support Systems
               </div>
-            ))}
+
+              <h2 className="mt-4 text-5xl font-medium tracking-tight text-sw-text lg:text-6xl">
+                One appliance. Multiple support conditions.
+              </h2>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {supportSystemFit.map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-3xl border border-black/10 bg-sw-panel p-6 text-lg leading-7 text-sw-muted shadow-soft lg:text-xl lg:leading-8"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-4xl border border-black/10 bg-sw-panel shadow-soft">
+              <div
+                className="aspect-[16/10] w-full bg-cover bg-center"
+                style={{
+                  backgroundImage:
+                    "url('/images/technical-data/technical-support-systems-main.webp')",
+                }}
+              />
+            </div>
           </div>
         </div>
       </section>
 
       <section className="border-b border-black/10 bg-sw-panel">
-        <div className="mx-auto max-w-shell px-6 py-16 lg:px-10 lg:py-24">
-          <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
-            Operation
-          </div>
-
-          <h2 className="mt-4 text-4xl font-medium tracking-tight text-sw-text lg:text-5xl">
-            Reduced maintenance, simplified operation
-          </h2>
-
-          <div className="mt-8 overflow-hidden rounded-4xl border border-black/10 bg-white shadow-soft">
-            <div
-              className="aspect-[16/9] w-full bg-cover bg-center"
-              style={{
-                backgroundImage:
-                  "url('/images/technical-data/technical-self-cleaning-main.webp')",
-              }}
-            />
-          </div>
-
-          <div className="mt-14 grid gap-4 lg:grid-cols-2">
-            {operationFeatures.map((item) => (
+        <div className="mx-auto max-w-shell px-6 py-16 lg:px-10 lg:py-20">
+          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+            <div className="overflow-hidden rounded-4xl border border-black/10 bg-white shadow-soft lg:order-first">
               <div
-                key={item}
-                className="rounded-3xl border border-black/10 bg-white p-6 text-lg leading-7 text-sw-muted shadow-soft"
-              >
-                {item}
+                className="aspect-[16/10] w-full bg-cover bg-center"
+                style={{
+                  backgroundImage:
+                    "url('/images/technical-data/technical-self-cleaning-main.webp')",
+                }}
+              />
+            </div>
+
+            <div>
+              <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
+                Operation
               </div>
-            ))}
+
+              <h2 className="mt-4 text-5xl font-medium tracking-tight text-sw-text lg:text-6xl">
+                Reduced maintenance, simplified operation
+              </h2>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {operationFeatures.map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-3xl border border-black/10 bg-white p-6 text-lg leading-7 text-sw-muted shadow-soft lg:text-xl lg:leading-8"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

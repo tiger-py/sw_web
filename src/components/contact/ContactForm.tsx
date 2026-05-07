@@ -61,23 +61,23 @@ export function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-4xl border border-black/10 bg-sw-panel p-6 shadow-soft lg:p-8"
+      className="rounded-4xl border border-black/10 bg-sw-panel p-7 shadow-soft lg:p-9"
     >
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-2">
         <div>
-          <label className="text-sm font-medium text-sw-text" htmlFor="name">
+          <label className="text-base font-medium text-sw-text" htmlFor="name">
             Name *
           </label>
           <input
             id="name"
             name="name"
             required
-            className="mt-2 w-full rounded-full border border-black/10 bg-white px-4 py-3 text-sw-text outline-none transition focus:border-sw-green"
+            className="mt-2 w-full rounded-full border border-black/10 bg-white px-5 py-4 text-lg text-sw-text outline-none transition focus:border-sw-green"
           />
         </div>
 
         <div>
-          <label className="text-sm font-medium text-sw-text" htmlFor="email">
+          <label className="text-base font-medium text-sw-text" htmlFor="email">
             Email *
           </label>
           <input
@@ -85,24 +85,24 @@ export function ContactForm() {
             name="email"
             type="email"
             required
-            className="mt-2 w-full rounded-full border border-black/10 bg-white px-4 py-3 text-sw-text outline-none transition focus:border-sw-green"
+            className="mt-2 w-full rounded-full border border-black/10 bg-white px-5 py-4 text-lg text-sw-text outline-none transition focus:border-sw-green"
           />
         </div>
 
         <div>
-          <label className="text-sm font-medium text-sw-text" htmlFor="company">
+          <label className="text-base font-medium text-sw-text" htmlFor="company">
             Company
           </label>
           <input
             id="company"
             name="company"
-            className="mt-2 w-full rounded-full border border-black/10 bg-white px-4 py-3 text-sw-text outline-none transition focus:border-sw-green"
+            className="mt-2 w-full rounded-full border border-black/10 bg-white px-5 py-4 text-lg text-sw-text outline-none transition focus:border-sw-green"
           />
         </div>
 
         <div>
           <label
-            className="text-sm font-medium text-sw-text"
+            className="text-base font-medium text-sw-text"
             htmlFor="projectType"
           >
             Project type
@@ -110,7 +110,7 @@ export function ContactForm() {
           <select
             id="projectType"
             name="projectType"
-            className="mt-2 w-full rounded-full border border-black/10 bg-white px-4 py-3 text-sw-text outline-none transition focus:border-sw-green"
+            className="mt-2 w-full rounded-full border border-black/10 bg-white px-5 py-4 text-lg text-sw-text outline-none transition focus:border-sw-green"
           >
             <option value="">Select project type</option>
             {projectTypes.map((type) => (
@@ -122,13 +122,13 @@ export function ContactForm() {
         </div>
 
         <div className="md:col-span-2">
-          <label className="text-sm font-medium text-sw-text" htmlFor="location">
+          <label className="text-base font-medium text-sw-text" htmlFor="location">
             Project location
           </label>
           <input
             id="location"
             name="location"
-            className="mt-2 w-full rounded-full border border-black/10 bg-white px-4 py-3 text-sw-text outline-none transition focus:border-sw-green"
+            className="mt-2 w-full rounded-full border border-black/10 bg-white px-5 py-4 text-lg text-sw-text outline-none transition focus:border-sw-green"
           />
         </div>
 
@@ -139,7 +139,7 @@ export function ContactForm() {
         </div>
 
         <div className="md:col-span-2">
-          <label className="text-sm font-medium text-sw-text" htmlFor="message">
+          <label className="text-base font-medium text-sw-text" htmlFor="message">
             Message *
           </label>
           <textarea
@@ -147,28 +147,28 @@ export function ContactForm() {
             name="message"
             required
             rows={6}
-            className="mt-2 w-full rounded-3xl border border-black/10 bg-white px-4 py-3 text-sw-text outline-none transition focus:border-sw-green"
+            className="mt-2 w-full rounded-3xl border border-black/10 bg-white px-5 py-4 text-lg text-sw-text outline-none transition focus:border-sw-green"
           />
         </div>
       </div>
 
-      <div className="mt-6 flex flex-wrap items-center gap-4">
+      <div className="mt-7 flex flex-wrap items-center gap-4">
         <button
           type="submit"
           disabled={status === "sending"}
-          className="rounded-full bg-sw-green px-6 py-3 text-sm font-medium text-white transition hover:bg-sw-green/90 disabled:cursor-not-allowed disabled:opacity-60"
+          className="rounded-full bg-sw-green px-7 py-4 text-base font-medium text-white transition hover:bg-sw-green/90 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {status === "sending" ? "Sending..." : "Send enquiry"}
         </button>
 
         {status === "sent" && (
-          <p className="text-sm font-medium text-sw-green">
+          <p className="text-base font-medium text-sw-green">
             Message sent. We’ll get back to you shortly.
           </p>
         )}
 
         {status === "error" && (
-          <p className="text-sm font-medium text-red-700">{error}</p>
+          <p className="text-base font-medium text-red-700">{error}</p>
         )}
       </div>
     </form>

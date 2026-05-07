@@ -1,68 +1,71 @@
-import { KeywordPill } from "@/components/ui/KeywordPill";
 import type { DeploymentType } from "@/types/content";
-import { DeploymentCarousel } from "./DeploymentCarousel";
-import { DeploymentMetricStrip } from "./DeploymentMetricStrip";
+import { DeploymentFeatureCards } from "./DeploymentFeatureCards";
+import { DeploymentProcessStrip } from "./DeploymentProcessStrip";
+import { DeploymentSimulationCTA } from "./DeploymentSimulationCTA";
 
 type DeploymentChapterProps = {
   item: DeploymentType;
-  isFirst?: boolean;
 };
 
-export function DeploymentChapter({
-  item,
-  isFirst = false,
-}: DeploymentChapterProps) {
+export function DeploymentChapter({ item }: DeploymentChapterProps) {
   return (
-    <section
-      id={item.slug}
-      className={[
-        "bg-white scroll-mt-24",
-        isFirst ? "" : "border-t border-black/10",
-      ].join(" ")}
-    >
-      <div
-        className={[
-          "mx-auto max-w-shell px-6 lg:px-10",
-          isFirst ? "pt-8 pb-16 lg:pt-10 lg:pb-24" : "py-16 lg:py-24",
-        ].join(" ")}
-      >
-        <div className="mb-10 grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-          <div>
+    <article id={item.slug} className="bg-white">
+      <section className="relative flex min-h-[86vh] items-end overflow-hidden bg-black text-white">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url('${item.heroImage}')` }}
+          aria-hidden="true"
+        />
+
+        <div
+          className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/95 to-transparent"
+          aria-hidden="true"
+        />
+
+        <div className="relative mx-auto w-full max-w-shell px-6 pb-20 pt-40 lg:px-10 lg:pb-28 lg:pt-48">
+          <div className="max-w-6xl">
             {item.eyebrow ? (
-              <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
+              <div className="mb-5 text-sm font-medium uppercase tracking-eyebrow text-white/85">
                 {item.eyebrow}
               </div>
             ) : null}
 
-            <h2 className="mt-4 text-4xl font-medium tracking-tight text-sw-text lg:text-5xl">
-              {item.title}
-            </h2>
+            <div className="flex flex-col gap-5 lg:flex-row lg:items-center">
+              <img
+                src="/icons/logo.png"
+                alt="Solar Waves"
+                className="h-auto w-[72px] shrink-0 opacity-95 md:w-[88px] lg:w-[104px]"
+              />
 
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-sw-muted">
+              <h1 className="max-w-5xl text-5xl font-medium tracking-tight text-white sm:text-6xl lg:text-7xl">
+                {item.title}
+              </h1>
+            </div>
+
+            <p className="mt-6 max-w-4xl text-2xl leading-9 text-white/90">
               {item.subtitle}
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="flex flex-wrap gap-2 lg:justify-end">
-            {item.keywords.map((keyword) => (
-              <KeywordPill key={keyword}>{keyword}</KeywordPill>
-            ))}
+      <section className="mx-auto max-w-shell px-6 py-24 lg:px-10 lg:py-32">
+        <div className="mb-12 max-w-4xl">
+          <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
+            Deployment Strategy
           </div>
+
+          <h2 className="mt-4 text-5xl font-medium tracking-tight text-sw-text lg:text-6xl">
+            Four characteristics that make Solar Waves unique.
+          </h2>
         </div>
 
-        <div className="relative left-1/2 right-1/2 mb-8 w-screen -translate-x-1/2">
-          <div
-            className="h-[42rem] bg-cover bg-center sm:h-[48rem] lg:h-[56rem]"
-            style={{ backgroundImage: `url('${item.heroImage}')` }}
-          />
-        </div>
+        <DeploymentFeatureCards items={item.featureCards} />
+      </section>
 
-        <DeploymentCarousel slides={item.slides} />
+      <DeploymentProcessStrip />
 
-        <div className="mt-8">
-          <DeploymentMetricStrip items={item.metrics} />
-        </div>
-      </div>
-    </section>
+      <DeploymentSimulationCTA />
+    </article>
   );
 }

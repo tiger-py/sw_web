@@ -12,13 +12,15 @@ export function SectionHeading({
   description,
 }: SectionHeadingProps) {
   return (
-    <div className="max-w-3xl">
+    <div className="max-w-4xl">
       <Eyebrow>{eyebrow}</Eyebrow>
-      <h2 className="mt-4 text-4xl font-medium tracking-tight text-sw-text lg:text-5xl">
+
+      <h2 className="mt-4 text-5xl font-medium tracking-tight text-sw-text lg:text-6xl">
         {title}
       </h2>
+
       {description ? (
-        <p className="mt-5 max-w-2xl text-lg leading-8 text-sw-muted">
+        <p className="mt-6 max-w-3xl text-xl leading-9 text-sw-muted">
           {description}
         </p>
       ) : null}

@@ -59,7 +59,7 @@ export function DeploymentCarousel({ slides }: DeploymentCarouselProps) {
             {getKindLabel(activeSlide.kind)}
           </div>
           {activeSlide.label ? (
-            <div className="mt-2 text-2xl font-medium tracking-tight text-white">
+            <div className="mt-3 max-w-3xl text-3xl font-medium tracking-tight text-white lg:text-4xl">
               {activeSlide.label}
             </div>
           ) : null}

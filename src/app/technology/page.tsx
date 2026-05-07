@@ -1,7 +1,7 @@
 import { TechnologyChapter } from "@/components/technology/TechnologyChapter";
-import { FinalCTASection } from "@/components/sections/FinalCTASection";
 import { technologyChapters } from "@/content/technology";
 import { buildMetadata } from "@/lib/seo";
+import { FinalCTASection } from "@/components/sections/FinalCTASection";
 
 export const metadata = buildMetadata(
   "Technology",
@@ -10,13 +10,9 @@ export const metadata = buildMetadata(
 
 export default function TechnologyPage() {
   return (
-    <main className="min-h-screen bg-white pt-28 text-sw-text">
+    <main className="min-h-screen bg-white text-sw-text">
       {technologyChapters.map((item, index) => (
-        <TechnologyChapter
-          key={item.slug}
-          item={item}
-          isFirst={index === 0}
-        />
+        <TechnologyChapter key={item.slug} item={item} isFirst={index === 0} />
       ))}
 
       <FinalCTASection />

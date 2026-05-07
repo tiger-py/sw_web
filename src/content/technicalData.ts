@@ -2,19 +2,19 @@ import type { DownloadItem, MetricItem } from "@/types/content";
 
 export const technicalIntro = {
   eyebrow: "Technical Data",
-  title: "Technical foundation of the Solar Waves appliance",
+  title: "Solar Waves - Technical Data",
   description:
-    "Solar Waves is designed as pre-manufactured solar power infrastructure: an integrated appliance combining structure, power surface, wiring logic, transport format, and support-system compatibility. The purpose is practical: reduce field complexity, improve deployment repeatability, and make solar easier to roll out across diverse infrastructure conditions.",
+    "Solar Waves is designed as pre-manufactured solar power appliance. The purpose is practical: reduce field complexity, improve deployment strategy, and make solar easier to roll out across diverse sites.",
   backgroundImage: "/images/backgrounds/technical-data-header.webp",
 };
 
 export const technicalMetrics: MetricItem[] = [
-  { value: "50kW", label: "Unit output" },
+  { value: "50 KW", label: "Unit output" },
   { value: "1000V DC", label: "Voltage" },
   { value: "21.5%", label: "Module efficiency" },
-  { value: "~2,500kg", label: "Approximate unit weight" },
+  { value: "~2,500kg", label: "Unit weight" },
   { value: "6m × 2.4m", label: "Transport dimensions" },
-  { value: "CAT 5", label: "Wind rating" },
+  { value: "Category 5", label: "Wind rating" },
 ];
 
 export const technicalFeatureGroups = [
@@ -50,7 +50,7 @@ export const technicalFeatureGroups = [
 export const technicalTransportMetrics: MetricItem[] = [
   { value: "2", label: "Units / 6 m container" },
   { value: "4", label: "Units / 12 m container" },
-  { value: "Minutes", label: "Deployment sequence" },
+  { value: "Minutes to Hours", label: "for Deployment" },
 ];
 
 export const supportSystemFit = [

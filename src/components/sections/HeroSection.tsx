@@ -1,4 +1,3 @@
-import { ButtonLink } from "@/components/ui/ButtonLink";
 import type { HeroContent } from "@/types/content";
 
 type HeroSectionProps = {
@@ -14,17 +13,20 @@ export function HeroSection({ content }: HeroSectionProps) {
         aria-hidden="true"
       />
 
-      <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
       <div
-        className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/65 to-transparent"
+        className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/85 to-transparent"
         aria-hidden="true"
       />
 
-      <img
-        src="/icons/solar-waves-logo.png"
-        alt="Solar Waves"
-        className="pointer-events-none absolute left-1/2 top-[36%] z-10 hidden h-auto w-[min(62vw,1120px)] -translate-x-1/2 -translate-y-1/2 select-none opacity-95 md:block lg:w-[min(72vw,1320px)] 2xl:w-[min(76vw,1480px)]"
-      />
+      <div className="pointer-events-none absolute inset-x-0 top-[34%] z-10 hidden -translate-y-1/2 md:block">
+        <div className="mx-auto flex w-full max-w-shell justify-end px-6 lg:px-10">
+          <img
+            src="/icons/solar-waves-logo.png"
+            alt="Solar Waves"
+            className="h-auto w-[min(74vw,980px)] select-none opacity-95 drop-shadow-[0_14px_38px_rgba(0,0,0,0.45)] lg:w-[min(78vw,1120px)] 2xl:w-[min(80vw,1240px)]"
+          />
+        </div>
+      </div>
 
       <div className="relative z-20 mx-auto flex w-full max-w-shell flex-col px-6 pb-16 pt-[46vh] lg:px-10 lg:pb-24">
         <div className="max-w-5xl">
@@ -36,17 +38,24 @@ export function HeroSection({ content }: HeroSectionProps) {
             {content.title}
           </h1>
 
-          <p className="mt-6 max-w-3xl text-xl leading-8 text-white">
+          <p className="mt-6 max-w-4xl text-2xl leading-9 text-white">
             {content.subtitle}
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <ButtonLink href={content.primaryCta.href}>
+            <a
+              href={content.primaryCta.href}
+              className="inline-flex items-center justify-center rounded-full bg-white px-7 py-4 text-base font-medium text-black shadow-[0_10px_30px_rgba(0,0,0,0.28)] transition hover:bg-white/88"
+            >
               {content.primaryCta.label}
-            </ButtonLink>
-            <ButtonLink href={content.secondaryCta.href} variant="secondary">
+            </a>
+
+            <a
+              href={content.secondaryCta.href}
+              className="inline-flex items-center justify-center rounded-full border border-white/45 bg-white/10 px-7 py-4 text-base font-medium text-white shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-md transition hover:border-white/70 hover:bg-white/18"
+            >
               {content.secondaryCta.label}
-            </ButtonLink>
+            </a>
           </div>
         </div>
       </div>

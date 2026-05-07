@@ -13,11 +13,11 @@ export default function ContactPage() {
           Contact
         </div>
         <h1 className="mt-4 max-w-4xl text-5xl font-medium tracking-tight lg:text-6xl">
-          Discuss a Solar Waves deployment.
+          Talk to us.
         </h1>
 
         <p className="mt-5 max-w-2xl text-lg leading-8 text-sw-muted">
-          Solar Waves is built for infrastructure owners, project developers, utilities, landholders, water authorities, industrial operators, and partners looking for a faster, more repeatable way to deploy solar power.
+          Solar Waves is built for project developers, utilities, landholders, water authorities, industrial operators, and partners looking for a faster, more repeatable way to deploy solar power.
         </p>
 
         <p className="mt-5 max-w-2xl text-lg leading-8 text-sw-muted">

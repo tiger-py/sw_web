@@ -37,9 +37,9 @@ export function SiteFooter() {
               />
             </Link>
 
-            <p className="mt-6 max-w-md text-base leading-7 text-sw-muted">
-              Pre-manufactured solar power infrastructure, delivered as an
-              industrial appliance for faster, more repeatable deployment.
+            <p className="mt-6 max-w-md text-base leading-9 text-sw-muted">
+              A pre-manufactured solar power solution, delivered as an
+              industrial appliance for faster, more predictable deployment.
             </p>
           </div>
 

@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { KeywordPill } from "@/components/ui/KeywordPill";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import type { DeploymentType } from "@/types/content";
 
 type HomeDeploymentCarouselSectionProps = {
@@ -26,21 +25,44 @@ export function HomeDeploymentCarouselSection({
   }, [items]);
 
   function goPrevious() {
-    setActiveIndex((current) => (current === 0 ? items.length - 1 : current - 1));
+    setActiveIndex((current) =>
+      current === 0 ? items.length - 1 : current - 1
+    );
   }
 
   function goNext() {
-    setActiveIndex((current) => (current === items.length - 1 ? 0 : current + 1));
+    setActiveIndex((current) =>
+      current === items.length - 1 ? 0 : current + 1
+    );
   }
 
   return (
     <section className="border-t border-black/10 bg-white">
-      <div className="mx-auto max-w-shell px-6 py-12 lg:px-10 lg:py-16">
-        <SectionHeading
-          eyebrow="Deployment Types"
-          title="One solar appliance for many infrastructure environments."
-          description="The Solar Waves appliance stays repeatable while the infrastructure interface adapts. The same core product logic can serve canals, reservoirs, agricultural land, car parks, charging stations, remote sites, and ground-mount projects."
-        />
+      <div className="mx-auto max-w-shell px-6 py-24 lg:px-10 lg:py-32">
+        <div className="max-w-5xl">
+          <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
+            Deployment Types
+          </div>
+
+          <div className="mt-4 flex flex-col gap-5 lg:flex-row lg:items-center">
+            <img
+              src="/icons/logo.png"
+              alt="Solar Waves"
+              className="h-auto w-[72px] shrink-0 opacity-95 md:w-[88px] lg:w-[104px]"
+            />
+
+            <h2 className="text-5xl font-medium tracking-tight text-sw-text lg:text-6xl">
+              One solar appliance for many environments.
+            </h2>
+          </div>
+
+          <p className="mt-6 max-w-4xl text-xl leading-9 text-sw-muted">
+            Solar Waves stays the same, while the support system adjusts to
+            different sites. The arrays fold out on ground, over water canals or
+            reservoirs, agricultural land, car parks, EV charging stations and
+            temporary sites.
+          </p>
+        </div>
       </div>
 
       <div className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 overflow-hidden">
@@ -103,7 +125,7 @@ export function HomeDeploymentCarouselSection({
                           {item.title}
                         </h3>
 
-                        <p className="mt-2 max-w-2xl text-sm leading-6 text-white/80 lg:text-base lg:leading-7">
+                        <p className="mt-3 max-w-3xl text-base leading-7 text-white/80 lg:text-lg lg:leading-8">
                           {item.subtitle}
                         </p>
 
@@ -140,7 +162,7 @@ export function HomeDeploymentCarouselSection({
         </div>
       </div>
 
-      <div className="h-8 lg:h-10" />
+      <div className="h-24 lg:h-32" />
     </section>
   );
 }

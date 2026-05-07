@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import type { SupportSystem } from "@/types/content";
 
 type SupportSystemsCarouselSectionProps = {
@@ -24,21 +23,44 @@ export function SupportSystemsCarouselSection({
   }, [items]);
 
   function goPrevious() {
-    setActiveIndex((current) => (current === 0 ? items.length - 1 : current - 1));
+    setActiveIndex((current) =>
+      current === 0 ? items.length - 1 : current - 1
+    );
   }
 
   function goNext() {
-    setActiveIndex((current) => (current === items.length - 1 ? 0 : current + 1));
+    setActiveIndex((current) =>
+      current === items.length - 1 ? 0 : current + 1
+    );
   }
 
   return (
     <section className="border-t border-black/10 bg-white">
-      <div className="mx-auto max-w-shell px-6 py-12 lg:px-10 lg:py-16">
-        <SectionHeading
-          eyebrow="Adjustable Support Systems"
-          title="The appliance stays consistent. The support adapts."
-          description="Different sites require different interfaces. Solar Waves separates the repeatable power appliance from the site-specific support condition, allowing rail, suspended, elevated, canopy, ground, or floating systems to serve the same underlying deployment logic."
-        />
+      <div className="mx-auto max-w-shell px-6 py-24 lg:px-10 lg:py-32">
+        <div className="max-w-5xl">
+          <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
+            Adjustable Support Systems
+          </div>
+
+          <div className="mt-4 flex flex-col gap-5 lg:flex-row lg:items-center">
+            <img
+              src="/icons/logo.png"
+              alt="Solar Waves"
+              className="h-auto w-[72px] shrink-0 opacity-95 md:w-[88px] lg:w-[104px]"
+            />
+
+            <h2 className="text-5xl font-medium tracking-tight text-sw-text lg:text-6xl">
+              Different supports for different sites.
+            </h2>
+          </div>
+
+          <p className="mt-6 max-w-4xl text-xl leading-9 text-sw-muted">
+            Different sites require different supports. Solar Waves separates the
+            repeatable rapid deployment sequence from the site-specific support
+            condition, allowing rail, suspended, elevated, canopy mounted or
+            floating solar.
+          </p>
+        </div>
       </div>
 
       <div className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 overflow-hidden">
@@ -101,7 +123,7 @@ export function SupportSystemsCarouselSection({
                           {item.name}
                         </h3>
 
-                        <p className="mt-2 max-w-2xl text-sm leading-6 text-white/80 lg:text-base lg:leading-7">
+                        <p className="mt-3 max-w-3xl text-base leading-7 text-white/80 lg:text-lg lg:leading-8">
                           {item.detail}
                         </p>
 
@@ -132,7 +154,7 @@ export function SupportSystemsCarouselSection({
         </div>
       </div>
 
-      <div className="h-8 lg:h-10" />
+      <div className="h-24 lg:h-32" />
     </section>
   );
 }

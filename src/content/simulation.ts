@@ -1,8 +1,8 @@
 export const simulationIntro = {
   eyebrow: "Simulation",
-  title: "Explore Solar Waves performance by site, array, and deployment condition.",
+  title: "Annual power generation and water savings.",
   description:
-    "Use the interactive Solar Waves simulation to explore indicative annual power generation, water savings from shading, and rainwater collection across ground and over-water deployment scenarios.",
+    "Use the interactive Solar Waves simulation to explore indicative annual power generation, water savings from shading, and rainwater collection across ground and over-water deployment scenarios and compare it to other solar power deployment types.",
   backgroundImage: "/images/backgrounds/simulation-header.webp",
 };
 
@@ -17,19 +17,19 @@ export const simulationSteps = [
     value: "02",
     title: "Set the array configuration",
     description:
-      "Choose Solar Waves or Solar Canopy, select the panel type, and adjust orientation, elevation, surface type, and array copies.",
+      "Choose Solar Waves or a solar canopy for comparison, select the panel type, and adjust orientation, elevation, surface type, and array copies.",
   },
   {
     value: "03",
     title: "Compare ground and water deployment",
     description:
-      "Switch between on-ground and over-water modes to explore how deployment context changes geometry, water surface, and output metrics.",
+      "Switch between on-ground and over-water modes to explore how deployment context affects power output or explore water savings over water.",
   },
   {
     value: "04",
     title: "Review annual performance",
     description:
-      "Compare indicative annual power generation, plane-of-array irradiance, water saved by shading, and rainwater collection.",
+      "Compare annual power generation, water saved by shading, and rainwater collection.",
   },
   {
     value: "05",
