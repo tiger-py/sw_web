@@ -1,10 +1,12 @@
 import { FinalCTASection } from "@/components/sections/FinalCTASection";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { ApplianceRevealSection } from "@/components/sections/ApplianceRevealSection";
 import { HomeDeploymentCarouselSection } from "@/components/sections/HomeDeploymentCarouselSection";
 import { SupportSystemsCarouselSection } from "@/components/sections/SupportSystemsCarouselSection";
 import { TechnicalPreviewSection } from "@/components/sections/TechnicalPreviewSection";
 import { TechnologyPreviewSection } from "@/components/sections/TechnologyPreviewSection";
 import {
+  applianceMetrics,
   featuredDeploymentTypes,
   homeHero,
   supportSystems,
@@ -23,7 +25,11 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-sw-text">
       <HeroSection content={homeHero} />
+
+      <ApplianceRevealSection content={homeHero} metrics={applianceMetrics} />
+
       <HomeDeploymentCarouselSection items={featuredDeploymentTypes} />
+
       <TechnologyPreviewSection
         eyebrow={technologyPreview.eyebrow}
         title={technologyPreview.title}
@@ -31,7 +37,9 @@ export default function HomePage() {
         image={technologyPreview.image}
         chapters={technologyPreview.chapters}
       />
+
       <SupportSystemsCarouselSection items={supportSystems} />
+
       <TechnicalPreviewSection
         eyebrow={technicalPreview.eyebrow}
         title={technicalPreview.title}
@@ -39,6 +47,7 @@ export default function HomePage() {
         image={technicalPreview.image}
         metrics={technicalPreviewMetrics}
       />
+
       <FinalCTASection />
     </main>
   );

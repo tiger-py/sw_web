@@ -97,13 +97,13 @@ export const deploymentTypes: DeploymentType[] = [
     ],
     featureCards: [
       {
-        title: "Rail Deployment",
+        title: "Type 1: Narrow Water Canals",
         description:
           "Rail-mounted systems suit smaller irrigation canals where the appliance can be positioned above water while preserving maintenance movement. The array can be simply folded back to access the canal.",
         image: "/images/deployments/deployment-over-canals-rails.webp",
       },
       {
-        title: "Cable-Suspended Deployment",
+        title: "Type 2: Wide Water Canals",
         description:
           "Cable-suspended configurations allow wider canal spans. While suspended in the air, bridges between the solar panels allow for maintenance access.",
         image: "/images/deployments/deployment-over-canals-deployed.webp",
@@ -169,7 +169,7 @@ export const deploymentTypes: DeploymentType[] = [
       {
         title: "Water Collection",
         description:
-          "Forming a water-tight roof, Solar Waves offers in-build ways for rainwater collection. Solar Waves can be compined with pre-manufactured containers of variuos sizes",
+          "Forming a water-tight roof, Solar Waves offers in-build ways for rainwater collection. Solar Waves can be compined with pre-manufactured containers of various sizes",
         image: "/images/technology/technology-agrivoltaics-detail.webp",
       },
       {

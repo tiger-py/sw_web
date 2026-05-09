@@ -1,13 +1,14 @@
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import type { MetricItem } from "@/types/content";
 import { MetricCard } from "@/components/ui/MetricCard";
+import type { HeroContent, MetricItem } from "@/types/content";
 
 type ApplianceRevealSectionProps = {
+  content: HeroContent;
   metrics: MetricItem[];
 };
 
 export function ApplianceRevealSection({
+  content,
   metrics,
 }: ApplianceRevealSectionProps) {
   return (
@@ -16,22 +17,37 @@ export function ApplianceRevealSection({
       className="relative overflow-hidden border-t border-black/10 bg-sw-panel"
     >
       <div className="mx-auto max-w-shell px-6 py-20 lg:px-10 lg:py-28">
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="max-w-5xl">
+          <div className="mb-5 text-sm font-medium uppercase tracking-eyebrow text-sw-muted">
+            {content.eyebrow}
+          </div>
+
+          <h1 className="max-w-5xl text-5xl font-medium tracking-tight text-sw-text sm:text-6xl lg:text-7xl">
+            {content.title}
+          </h1>
+
+          <p className="mt-6 max-w-4xl whitespace-pre-line text-2xl leading-9 text-sw-muted">
+            {content.subtitle}
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <ButtonLink href={content.primaryCta.href}>
+              {content.primaryCta.label}
+            </ButtonLink>
+
+            <a
+              href={content.secondaryCta.href}
+              className="inline-flex items-center justify-center rounded-full border border-black/15 bg-white px-7 py-4 text-base font-medium text-sw-text shadow-sm transition hover:border-black/30 hover:bg-black/[0.03]"
+            >
+              {content.secondaryCta.label}
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-14 grid gap-4 sm:grid-cols-3">
           {metrics.map((metric) => (
             <MetricCard key={metric.label} item={metric} />
           ))}
-        </div>
-
-        <div className="mt-10 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
-          <SectionHeading
-            eyebrow="Technology."
-            title="Pre-manufactured solar arrays shipped as appliance."
-            description="Solar Waves transforms solar from a construction project on site into a pre-manufactured product for rapid deployment. Structure, supports, wiring, transport format, and deployment sequence are designed together as one integrated appliance."
-          />
-
-          <div className="lg:justify-self-end">
-            <ButtonLink href="/technology">Explore the Technology</ButtonLink>
-          </div>
         </div>
 
         <div className="mt-10 overflow-hidden rounded-4xl border border-black/10 bg-black shadow-soft">

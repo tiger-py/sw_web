@@ -57,10 +57,7 @@ export function HomeDeploymentCarouselSection({
           </div>
 
           <p className="mt-6 max-w-4xl text-xl leading-9 text-sw-muted">
-            Solar Waves stays the same, while the support system adjusts to
-            different sites. The arrays fold out on ground, over water canals or
-            reservoirs, agricultural land, car parks, EV charging stations and
-            temporary sites.
+            Solar Waves uses the same integrated system across land, water canals, reservoirs, agrivoltaics, car parks, EV charging stations, and temporary sites — unlocking niche deployment environments not suited to traditional solar systems.
           </p>
         </div>
       </div>

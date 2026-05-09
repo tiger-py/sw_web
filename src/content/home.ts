@@ -7,9 +7,14 @@ import type {
 
 export const homeHero: HeroContent = {
   eyebrow: "A pre-manufactured solar appliance.",
-  title: "A solar power revolution.",
-  subtitle:
-    "Solar Waves changes how solar is built and deployed. Instead of assembling piece by piece in the field, each unit is manufactured as an integrated solar power appliance: factory-built, pre-wired, transportable, and designed for rapid deployment. The revolutionary shift is not the panel. It is the deployment — moving complexity from the site into the factory.",
+  title: "A Solar Power Revolution.",
+  subtitle: `Solar Waves is redefining utility-scale solar deployment.
+Not built piece by piece in the field — but manufactured as a complete solar power appliance: factory-built, pre-wired, transportable, and rapidly deployed.
+
+The revolution is not the solar panel.
+The revolution is the system behind it.
+
+Green Energy Systems moves complexity out of the field and into advanced factory automation — delivering solar that is faster, stronger, smarter, and cheaper to deploy.`,
   primaryCta: {
     label: "Explore Solar Waves",
     href: "#appliance",
@@ -178,9 +183,9 @@ export const supportSystems: SupportSystem[] = [
 
 export const technologyPreview = {
   eyebrow: "Technology",
-  title: "Pre-manufactured for rapid deployment.",
+  title: "In-Factory Pre-Assembled Solar Deployment System",
   description:
-    "Solar Waves is a shift from on-site assembly to controlled factory production. Assembly, wiring, transport preparation, and quality control happen before the unit reaches site. The result is a solar power appliance that is pre-manufactured, transported, deployed, and repeated as expected.",
+    "Solar Waves transforms utility-scale solar from a labour-intensive site-built process into a fully pre-manufactured deployment system. Each Solar Wave is assembled, pre-wired, tested, and quality-controlled in the factory before transport to the site. The result is a repeatable solar power appliance designed for rapid deployment, reduced site labour, faster installation, and consistent performance.",
   image: "/images/technology/technology-preview.gif",
   chapters: [
     "Factory-Built Production",

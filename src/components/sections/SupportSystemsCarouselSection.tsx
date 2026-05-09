@@ -50,15 +50,12 @@ export function SupportSystemsCarouselSection({
             />
 
             <h2 className="text-5xl font-medium tracking-tight text-sw-text lg:text-6xl">
-              Different supports for different sites.
+              One solar appliance. Multiple support systems.
             </h2>
           </div>
 
           <p className="mt-6 max-w-4xl text-xl leading-9 text-sw-muted">
-            Different sites require different supports. Solar Waves separates the
-            repeatable rapid deployment sequence from the site-specific support
-            condition, allowing rail, suspended, elevated, canopy mounted or
-            floating solar.
+            Solar Waves uses the same repeatable pre-assembled solar appliance with numerous methods of support — including footings, floats, rails, cables, posts, suspended systems, elevated structures, and canopy-mounted solutions — enabling deployment across land, water, canals, reservoirs, car parks, and other niche environments.
           </p>
         </div>
       </div>
