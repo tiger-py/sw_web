@@ -6,7 +6,7 @@ import type {
 } from "@/types/content";
 
 export const homeHero: HeroContent = {
-  eyebrow: "A pre-assembled solar appliance.",
+  eyebrow: "A pre-manufactured solar appliance.",
   title: "A Solar Power Revolution.",
   subtitle: `Solar Waves is redefining utility-scale solar deployment.
 Not built piece by piece in the field — but manufactured as a complete solar power appliance: factory-built, pre-wired, transportable, and rapidly deployed.
@@ -27,8 +27,8 @@ Green Energy Systems moves complexity out of the field and into advanced factory
 };
 
 export const applianceMetrics: MetricItem[] = [
-  { value: "50 KW", label: "Per appliance MegaWaves" },
-  { value: "2 MegaWaves", label: "per 6 m container" },
+  { value: "50 KW", label: "Per appliance unit" },
+  { value: "2 Units", label: "per 6 m container" },
   { value: "CAT 5", label: "Wind rating" },
 ];
 
@@ -68,7 +68,7 @@ export const featuredDeploymentTypes: DeploymentType[] = [
     slug: "floating-solar",
     title: "On Water",
     subtitle:
-      "Use large water surfaces for solar power generation.",
+      "Use large water surfaces for solar power generation.s",
     keywords: [
       "Floating Support System",
       "Buoyant Deployment",
@@ -183,10 +183,10 @@ export const supportSystems: SupportSystem[] = [
 
 export const technologyPreview = {
   eyebrow: "Technology",
-  title: "Full In-Factory Automation (FIFA)",
+  title: "In-Factory Pre-Assembled Solar Deployment System",
   description:
-    "Solar Waves transforms utility-scale solar from a labour-intensive site-built process into a fully pre-assembled deployment system. Each Solar Wave is assembled, pre-wired, tested, and quality-controlled in the factory before transport to the site. The result is a repeatable solar power appliance designed for rapid deployment, reduced site labour, faster installation, and consistent performance.",
-  image: "/images/technology/technology-preview.gif",
+    "Solar Waves transforms utility-scale solar from a labour-intensive site-built process into a fully pre-manufactured deployment system. Each Solar Wave is assembled, pre-wired, tested, and quality-controlled in the factory before transport to the site. The result is a repeatable solar power appliance designed for rapid deployment, reduced site labour, faster installation, and consistent performance.",
+  image: "/images/technology/technology-factory-hero.webp",
   chapters: [
     "Factory-Built Production",
     "Containerized Transport",
@@ -197,8 +197,8 @@ export const technologyPreview = {
 };
 
 export const technicalPreviewMetrics: MetricItem[] = [
-  { value: "50 KW", label: "MegaWaves output" },
-  { value: "2 MegaWaves", label: "per shipping container" },
+  { value: "50 KW", label: "Unit output" },
+  { value: "2 Units", label: "per shipping container" },
   { value: "Category 5", label: "Wind rating" },
 ];
 
@@ -206,6 +206,6 @@ export const technicalPreview = {
   eyebrow: "Technical Data",
   title: "Solar Waves Technical Data.",
   description:
-    "Review the MegaWave output, transport format, operating logic, and deployment characteristics.",
+    "Review the unit output, transport format, operating logic, and deployment characteristics.",
   image: "/images/technical-data/technical-spec-render-main.webp",
 };

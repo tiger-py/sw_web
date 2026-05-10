@@ -4,7 +4,8 @@ import Link from "next/link";
 const platformLinks = [
   { label: "Technology", href: "/technology" },
   { label: "Technical Data", href: "/technical-data" },
-  { label: "Simulation", href: "/simulation" },
+  { label: "Power & Water Calculation", href: "/simulation" },
+  { label: "Videos", href: "/videos" },
 ];
 
 const deploymentLinks = [
@@ -17,9 +18,7 @@ const deploymentLinks = [
   { label: "EV Charging Stations", href: "/deployment-types#ev-charging-stations" },
 ];
 
-const contactLinks = [
-  { label: "Discuss a Deployment", href: "/contact" },
-];
+const contactLinks = [{ label: "Discuss a Deployment", href: "/contact" }];
 
 export function SiteFooter() {
   return (
@@ -27,7 +26,15 @@ export function SiteFooter() {
       <div className="mx-auto max-w-shell px-6 py-14 lg:px-10 lg:py-18">
         <div className="grid gap-10 lg:grid-cols-[1.35fr_0.75fr_1fr_0.75fr]">
           <div>
-            <Link href="/" className="inline-flex items-center gap-3">
+            <Link href="/" className="inline-flex flex-col items-start gap-4">
+              <Image
+                src="/icons/GES-Logo.png"
+                alt="Green Energy Systems"
+                width={220}
+                height={80}
+                className="h-12 w-auto"
+              />
+
               <Image
                 src="/icons/solar-waves-logo.svg"
                 alt="Solar Waves"
@@ -38,8 +45,8 @@ export function SiteFooter() {
             </Link>
 
             <p className="mt-6 max-w-md text-base leading-9 text-sw-muted">
-              A pre-assembled solar power solution, delivered as an
-              industrial appliance for faster, more predictable deployment.
+              A pre-assembled solar power solution, delivered as an industrial
+              appliance for faster, more predictable deployment.
             </p>
           </div>
 
@@ -49,9 +56,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-12 flex flex-col gap-4 border-t border-black/10 pt-6 text-sm text-black/50 lg:flex-row lg:items-center lg:justify-between">
-          <div>
-            © {new Date().getFullYear()} Solar Waves. All rights reserved.
-          </div>
+          <div>© {new Date().getFullYear()} Solar Waves. All rights reserved.</div>
 
           <div className="text-black/45">
             A new industrial model for solar deployment.

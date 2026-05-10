@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import type { SupportSystem } from "@/types/content";
 
 type SupportSystemsCarouselSectionProps = {
@@ -38,9 +39,7 @@ export function SupportSystemsCarouselSection({
     <section className="border-t border-black/10 bg-white">
       <div className="mx-auto max-w-shell px-6 py-24 lg:px-10 lg:py-32">
         <div className="max-w-5xl">
-          <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
-            Adjustable Support Systems
-          </div>
+          <Eyebrow>Adjustable Support Systems</Eyebrow>
 
           <div className="mt-4 flex flex-col gap-5 lg:flex-row lg:items-center">
             <img
@@ -66,7 +65,7 @@ export function SupportSystemsCarouselSection({
             type="button"
             onClick={goPrevious}
             aria-label="Previous support system"
-            className="absolute left-4 top-[29%] z-20 inline-flex -translate-y-1/2 items-center justify-center bg-transparent text-7xl font-light leading-none text-black transition hover:scale-110 sm:text-8xl lg:left-8 lg:text-9xl"
+            className="absolute left-6 top-[29%] z-20 inline-flex -translate-y-1/2 items-center justify-center bg-transparent text-7xl font-light leading-none text-black transition hover:scale-110 sm:text-8xl lg:left-8 lg:text-9xl"
           >
             <span aria-hidden="true">&lt;</span>
           </button>
@@ -144,7 +143,7 @@ export function SupportSystemsCarouselSection({
             type="button"
             onClick={goNext}
             aria-label="Next support system"
-            className="absolute right-4 top-[29%] z-20 inline-flex -translate-y-1/2 items-center justify-center bg-transparent text-7xl font-light leading-none text-black transition hover:scale-110 sm:text-8xl lg:right-8 lg:text-9xl"
+            className="absolute right-6 top-[29%] z-20 inline-flex -translate-y-1/2 items-center justify-center bg-transparent text-7xl font-light leading-none text-black transition hover:scale-110 sm:text-8xl lg:right-8 lg:text-9xl"
           >
             <span aria-hidden="true">&gt;</span>
           </button>
