@@ -11,9 +11,9 @@ export const howItWorksSteps = [
     value: "01",
     title: "Containerised transport",
     description:
-      "Solar Waves is designed to ship efficiently in standard containers. Each unit is assembled and packed at the factory to simplify transport, reduce logistics cost, and support repeatable rollout.",
+      "Solar Waves is designed to ship efficiently in standard containers. Each MegaWave is assembled and packed at the factory to simplify transport, reduce logistics cost, and support repeatable rollout.",
     points: [
-      "Units are assembled and packed at the factory",
+      "MegaWavess are assembled and packed at the factory",
       "Containerised delivery simplifies logistics and lowers transport cost",
       "2 arrays per 6 m container → ~100 kW",
       "4 arrays per 12 m container → ~200 kW",
@@ -50,7 +50,7 @@ export const howItWorksSteps = [
     description:
       "Solar Waves is designed to reduce maintenance complexity through durable materials, simpler access, and integrated cleaning features.",
     points: [
-      "Integrated self-cleaning system using collected rainwater",
+      "Integrated self-cleaning system (SCS) using collected rainwater",
       "Tool-free structural components for simpler servicing",
       "Durable aluminium structures designed for long service life",
     ],

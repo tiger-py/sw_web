@@ -20,7 +20,7 @@ export function TechnologySection({ tags }: TechnologySectionProps) {
             {tags.map((tag) => (
               <span
                 key={tag.label}
-                className="rounded-full border border-black/10 bg-sw-panel px-4 py-2 text-sm text-black/72"
+                className="rounded-full border border-black/10 bg-sw-panel px-4 py-2 text-base text-black/72"
               >
                 {tag.label}
               </span>

@@ -66,9 +66,9 @@ export function SupportSystemsCarouselSection({
             type="button"
             onClick={goPrevious}
             aria-label="Previous support system"
-            className="absolute left-6 top-[29%] z-20 inline-flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black text-xl text-white transition hover:bg-black/90 lg:left-8 lg:h-14 lg:w-14 lg:text-2xl"
+            className="absolute left-4 top-[29%] z-20 inline-flex -translate-y-1/2 items-center justify-center bg-transparent text-7xl font-light leading-none text-black transition hover:scale-110 sm:text-8xl lg:left-8 lg:text-9xl"
           >
-            ←
+            <span aria-hidden="true">&lt;</span>
           </button>
 
           <div className="w-screen overflow-hidden">
@@ -111,7 +111,7 @@ export function SupportSystemsCarouselSection({
                     </div>
 
                     {isActive ? (
-                      <div className="rounded-b-4xl bg-black px-4 py-3 text-white sm:px-5 sm:py-4 lg:px-6 lg:py-5">
+                      <div className="flex flex-col items-center rounded-b-4xl bg-black px-4 py-3 text-center text-white sm:px-5 sm:py-4 lg:px-6 lg:py-5">
                         <div className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/66">
                           Support Interface
                         </div>
@@ -120,7 +120,7 @@ export function SupportSystemsCarouselSection({
                           {item.name}
                         </h3>
 
-                        <p className="mt-3 max-w-3xl text-base leading-7 text-white/80 lg:text-lg lg:leading-8">
+                        <p className="mx-auto mt-3 max-w-3xl text-base leading-7 text-white/80 lg:text-lg lg:leading-8">
                           {item.detail}
                         </p>
 
@@ -144,9 +144,9 @@ export function SupportSystemsCarouselSection({
             type="button"
             onClick={goNext}
             aria-label="Next support system"
-            className="absolute right-6 top-[29%] z-20 inline-flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black text-xl text-white transition hover:bg-black/90 lg:right-8 lg:h-14 lg:w-14 lg:text-2xl"
+            className="absolute right-4 top-[29%] z-20 inline-flex -translate-y-1/2 items-center justify-center bg-transparent text-7xl font-light leading-none text-black transition hover:scale-110 sm:text-8xl lg:right-8 lg:text-9xl"
           >
-            →
+            <span aria-hidden="true">&gt;</span>
           </button>
         </div>
       </div>

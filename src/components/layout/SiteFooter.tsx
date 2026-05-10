@@ -38,7 +38,7 @@ export function SiteFooter() {
             </Link>
 
             <p className="mt-6 max-w-md text-base leading-9 text-sw-muted">
-              A pre-manufactured solar power solution, delivered as an
+              A pre-assembled solar power solution, delivered as an
               industrial appliance for faster, more predictable deployment.
             </p>
           </div>

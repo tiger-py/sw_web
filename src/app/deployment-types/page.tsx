@@ -45,7 +45,7 @@ export default function DeploymentTypesPage() {
             </div>
 
             <p className="mt-6 max-w-4xl text-2xl leading-9 text-white/90">
-              The same pre-manufactured solar appliance can be configured for
+              The same pre-assembled solar appliance can be configured for
               open land, canals, agriculture, reservoirs, mobility, parking, and
               charging infrastructure.
             </p>

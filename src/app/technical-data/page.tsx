@@ -1,4 +1,5 @@
 import { FinalCTASection } from "@/components/sections/FinalCTASection";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import {
   downloads,
   supportSystemFit,
@@ -14,10 +15,10 @@ export const metadata = buildMetadata(
 );
 
 const operationFeatures = [
-  "Self-cleaning",
+  "Self-Cleaning System (SCS)",
   "Rainwater collection",
   "Zero moving parts",
-  "Optional battery integration",
+  "On-board Battery (OBO)",
   "Low-maintenance operation",
 ];
 
@@ -41,9 +42,9 @@ export default function TechnicalDataPage() {
 
         <div className="relative mx-auto w-full max-w-shell px-6 py-20 lg:px-10 lg:py-28">
           <div className="max-w-5xl">
-            <div className="mb-5 text-sm font-medium uppercase tracking-eyebrow text-white">
+            <Eyebrow tone="light" className="mb-5">
               {technicalIntro.eyebrow}
-            </div>
+            </Eyebrow>
 
             <div className="flex flex-col gap-5 lg:flex-row lg:items-center">
               <img
@@ -57,7 +58,7 @@ export default function TechnicalDataPage() {
               </h1>
             </div>
 
-            <p className="mt-6 max-w-3xl text-xl leading-8 text-white">
+            <p className="mt-6 max-w-3xl text-2xl leading-9 text-white">
               {technicalIntro.description}
             </p>
           </div>
@@ -66,9 +67,7 @@ export default function TechnicalDataPage() {
 
       <section className="border-b border-black/10 bg-white">
         <div className="mx-auto max-w-shell px-6 py-16 lg:px-10 lg:py-24">
-          <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
-            Core Specifications
-          </div>
+          <Eyebrow>Core Specifications</Eyebrow>
 
           <div className="mt-8 overflow-hidden rounded-4xl border border-black/10 bg-sw-panel shadow-soft">
             <div
@@ -89,7 +88,7 @@ export default function TechnicalDataPage() {
                 <div className="text-3xl font-medium tracking-tight text-sw-text">
                   {metric.value}
                 </div>
-                <div className="mt-3 text-base leading-6 text-black/58">
+                <div className="mt-3 text-xl leading-8 text-black/58">
                   {metric.label}
                 </div>
               </div>
@@ -100,9 +99,7 @@ export default function TechnicalDataPage() {
 
       <section className="border-b border-black/10 bg-sw-panel">
         <div className="mx-auto max-w-shell px-6 py-16 lg:px-10 lg:py-24">
-          <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
-            Transport & Deployment
-          </div>
+          <Eyebrow>Transport & Deployment</Eyebrow>
 
           <h2 className="mt-4 text-4xl font-medium tracking-tight text-sw-text lg:text-5xl">
             Built for transport and rapid site deployment
@@ -127,7 +124,7 @@ export default function TechnicalDataPage() {
                 <div className="text-3xl font-medium tracking-tight text-sw-text">
                   {metric.value}
                 </div>
-                <div className="mt-3 text-base leading-6 text-black/58">
+                <div className="mt-3 text-xl leading-8 text-black/58">
                   {metric.label}
                 </div>
               </div>
@@ -140,9 +137,7 @@ export default function TechnicalDataPage() {
         <div className="mx-auto max-w-shell px-6 py-16 lg:px-10 lg:py-20">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
-              <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
-                Support Systems
-              </div>
+              <Eyebrow>Support Systems</Eyebrow>
 
               <h2 className="mt-4 text-5xl font-medium tracking-tight text-sw-text lg:text-6xl">
                 One appliance. Multiple support conditions.
@@ -152,7 +147,7 @@ export default function TechnicalDataPage() {
                 {supportSystemFit.map((item) => (
                   <div
                     key={item}
-                    className="rounded-3xl border border-black/10 bg-sw-panel p-6 text-lg leading-7 text-sw-muted shadow-soft lg:text-xl lg:leading-8"
+                    className="rounded-3xl border border-black/10 bg-sw-panel p-6 text-2xl leading-9 text-sw-muted shadow-soft"
                   >
                     {item}
                   </div>
@@ -187,9 +182,7 @@ export default function TechnicalDataPage() {
             </div>
 
             <div>
-              <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
-                Operation
-              </div>
+              <Eyebrow>Operation</Eyebrow>
 
               <h2 className="mt-4 text-5xl font-medium tracking-tight text-sw-text lg:text-6xl">
                 Reduced maintenance, simplified operation
@@ -199,7 +192,7 @@ export default function TechnicalDataPage() {
                 {operationFeatures.map((item) => (
                   <div
                     key={item}
-                    className="rounded-3xl border border-black/10 bg-white p-6 text-lg leading-7 text-sw-muted shadow-soft lg:text-xl lg:leading-8"
+                    className="rounded-3xl border border-black/10 bg-white p-6 text-2xl leading-9 text-sw-muted shadow-soft"
                   >
                     {item}
                   </div>
@@ -212,9 +205,7 @@ export default function TechnicalDataPage() {
 
       <section className="border-b border-black/10 bg-white">
         <div className="mx-auto max-w-shell px-6 py-16 lg:px-10 lg:py-24">
-          <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
-            Downloads
-          </div>
+          <Eyebrow>Downloads</Eyebrow>
 
           <h2 className="mt-4 text-4xl font-medium tracking-tight text-sw-text lg:text-5xl">
             Brochures and technical references
@@ -230,7 +221,7 @@ export default function TechnicalDataPage() {
                 <div className="text-2xl font-medium tracking-tight text-sw-text">
                   {item.title}
                 </div>
-                <div className="text-sm uppercase tracking-[0.18em] text-black/48">
+                <div className="text-base uppercase tracking-[0.18em] text-black/48">
                   {item.type}
                 </div>
               </a>

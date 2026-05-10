@@ -1,3 +1,4 @@
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import type { DeploymentType } from "@/types/content";
 import { DeploymentFeatureCards } from "./DeploymentFeatureCards";
 import { DeploymentProcessStrip } from "./DeploymentProcessStrip";
@@ -25,9 +26,9 @@ export function DeploymentChapter({ item }: DeploymentChapterProps) {
         <div className="relative mx-auto w-full max-w-shell px-6 pb-20 pt-40 lg:px-10 lg:pb-28 lg:pt-48">
           <div className="max-w-6xl">
             {item.eyebrow ? (
-              <div className="mb-5 text-sm font-medium uppercase tracking-eyebrow text-white/85">
+              <Eyebrow tone="light" className="mb-5">
                 {item.eyebrow}
-              </div>
+              </Eyebrow>
             ) : null}
 
             <div className="flex flex-col gap-5 lg:flex-row lg:items-center">
@@ -51,9 +52,7 @@ export function DeploymentChapter({ item }: DeploymentChapterProps) {
 
       <section className="mx-auto max-w-shell px-6 py-24 lg:px-10 lg:py-32">
         <div className="mb-12 max-w-4xl">
-          <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
-            Deployment Strategy
-          </div>
+          <Eyebrow>Deployment Strategy</Eyebrow>
 
           <h2 className="mt-4 text-5xl font-medium tracking-tight text-sw-text lg:text-6xl">
             Four characteristics that make Solar Waves unique.

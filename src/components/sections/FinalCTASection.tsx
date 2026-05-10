@@ -1,4 +1,5 @@
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export function FinalCTASection() {
   return (
@@ -20,15 +21,13 @@ export function FinalCTASection() {
 
       <div className="relative mx-auto max-w-shell px-6 py-40 lg:px-10 lg:py-42">
         <div className="rounded-4xl border border-white/20 bg-sw-panel/95 p-8 shadow-soft backdrop-blur-md lg:p-12">
-          <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
-            Next Step
-          </div>
+          <Eyebrow>Next Step</Eyebrow>
 
           <h2 className="mt-4 text-5xl font-medium tracking-tight text-sw-text lg:text-6xl">
             Talk to us about Solar Waves.
           </h2>
 
-         <p className="mt-6 max-w-4xl text-xl leading-9 text-sw-muted">
+         <p className="mt-6 max-w-4xl text-2xl leading-9 text-sw-muted">
             Discuss pilot projects, site fit, deployment requirements, and
             support-system fit with the Solar Waves team.
           </p>

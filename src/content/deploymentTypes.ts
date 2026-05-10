@@ -48,13 +48,13 @@ export const deploymentTypes: DeploymentType[] = [
       {
         title: "Reduced Field Labor",
         description:
-          "Solar Wavs arrives pre-manufactured and pre-configured on site and needs only a small crew for deployment. No major earth works like concrete are needed, protecting the land Solar Waves is deployed on.",
+          "Solar Wavs arrives pre-assembled and pre-configured on site and needs only a small crew for deployment. No major earth works like concrete are needed, protecting the land Solar Waves is deployed on.",
         image: "/images/deployments/deployment-ground-mount-maintenance.webp",
       },
       {
         title: "Solar as Appliance",
         description:
-          "The deployment is treated as a repeatable strategy: pre-manufactured, transported, placed, connected, and scaled across the site. Making solar deploymnts more predictable and safer to manage and maintain.",
+          "The deployment is treated as a repeatable strategy: pre-assembled, transported, placed, connected, and scaled across the site. Making solar deploymnts more predictable and safer to manage and maintain.",
         image: "/images/support-systems/support-grounded-main.webp",
       },
     ],
@@ -67,7 +67,7 @@ export const deploymentTypes: DeploymentType[] = [
       "Solar Waves can turn irrigation canals and water corridors into productive solar power infrastructure. Deployed above the canal using rail or cable-suspended systems, Solar Waves generates power while helping shade exposed water surfaces to reduce evaporation.",
     keywords: ["Rail Deployment", "Cable-Suspended Deployment", "Fold-Back Access", "Water Corridor Infrastructure"],
     metrics: ["Narrow canals", "Wide canals", "Access maintained", "On rails or cable-suspended"],
-    heroImage: "/images/deployments/deployment-over-canals-hero.webp",
+    heroImage: "/images/deployments/deployment-over-canals-rails.webp",
     slides: [
       {
         image: "/images/deployments/deployment-over-canals-rails.webp",
@@ -157,7 +157,7 @@ export const deploymentTypes: DeploymentType[] = [
       {
         title: "Greenhouses",
         description:
-          "Solar Waves can be delivered as a greenhouse kit. Pre-manufactured framing, supported by watertanks to harvest rainwater, form a canopy structure ideal for hydroponic farming",
+          "Solar Waves can be delivered as a greenhouse kit. Pre-assembled framing, supported by watertanks to harvest rainwater, form a canopy structure ideal for hydroponic farming",
         image: "/images/deployments/deployment-agrivoltaics-deployed.webp",
       },
       {
@@ -169,13 +169,13 @@ export const deploymentTypes: DeploymentType[] = [
       {
         title: "Water Collection",
         description:
-          "Forming a water-tight roof, Solar Waves offers in-build ways for rainwater collection. Solar Waves can be compined with pre-manufactured containers of various sizes",
+          "Forming a water-tight roof, Solar Waves offers in-build ways for rainwater collection. Solar Waves can be compined with pre-assembled containers of various sizes",
         image: "/images/technology/technology-agrivoltaics-detail.webp",
       },
       {
         title: "Elevated Supports",
         description:
-          "Pre-manufactured and delivered support structure lifts the appliance above productive land, adapting the same core system to farming conditions instead of replacing them.",
+          "Pre-assembled and delivered support structure lifts the appliance above productive land, adapting the same core system to farming conditions instead of replacing them.",
         image: "/images/support-systems/support-elevated-main.webp",
       },
     ],
@@ -395,7 +395,7 @@ export const deploymentTypes: DeploymentType[] = [
       {
         title: "Rapid Deployment",
         description:
-          "A pre-manufactured charging station kit, that can be rapidly assembled on site.",
+          "A pre-assembled charging station kit, that can be rapidly assembled on site.",
         image: "/images/deployments/deployment-ev-charging-maintenance.webp",
       },
       {

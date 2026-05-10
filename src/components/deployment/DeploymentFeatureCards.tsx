@@ -27,7 +27,7 @@ export function DeploymentFeatureCards({ items }: DeploymentFeatureCardsProps) {
               {item.title}
             </h3>
 
-            <p className="mt-4 max-w-2xl text-lg leading-8 text-sw-muted lg:text-xl lg:leading-9">
+            <p className="mt-4 max-w-2xl text-2xl leading-9 text-sw-muted">
               {item.description}
             </p>
           </div>

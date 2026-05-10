@@ -16,7 +16,7 @@ export function ButtonLink({
     <Link
       href={href}
       className={cn(
-        "inline-flex items-center rounded-full px-6 py-3 text-sm font-medium transition",
+        "inline-flex items-center rounded-full px-6 py-3 text-base font-medium transition",
         "bg-black text-white hover:bg-black/90"
       )}
     >

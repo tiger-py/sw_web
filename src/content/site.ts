@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Solar Waves",
   title: "Solar Waves — Solar power infrastructure, manufactured as an appliance",
   description:
-    "Pre-manufactured solar power infrastructure: factory-built, pre-wired, transportable, and designed for repeatable deployment across canals, land, water, parking, agriculture, and remote sites.",
+    "Pre-assembled solar power infrastructure: factory-built, pre-wired, transportable, and designed for repeatable deployment across canals, land, water, parking, agriculture, and remote sites.",
 };
 
 export const mainNav: NavItem[] = [
@@ -12,6 +12,6 @@ export const mainNav: NavItem[] = [
   { label: "Deployment Types", href: "/deployment-types" },
   { label: "Technology", href: "/technology" },
   { label: "Technical Data", href: "/technical-data" },
-  { label: "Power & Water Calculation", href: "/simulation" },
-  { label: "Contact", href: "/contact" },
+  { label: "Calculate Power Output & Water Savings", href: "/simulation" },
+//  { label: "Contact", href: "/contact" },
 ];

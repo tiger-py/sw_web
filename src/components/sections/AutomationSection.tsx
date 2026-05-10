@@ -34,7 +34,7 @@ export function AutomationSection({
             </div>
 
             <div className="rounded-4xl border border-black/10 bg-white p-6 shadow-soft">
-              <div className="text-sm uppercase tracking-[0.22em] text-black/48">
+              <div className="text-base uppercase tracking-[0.2em] text-black/48">
                 Manufacturing Logic
               </div>
               <div className="mt-5 flex flex-wrap gap-2">
@@ -47,7 +47,7 @@ export function AutomationSection({
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-black/10 bg-sw-panel px-4 py-2 text-sm text-black/72"
+                    className="rounded-full border border-black/10 bg-sw-panel px-4 py-2 text-base text-black/72"
                   >
                     {tag}
                   </span>

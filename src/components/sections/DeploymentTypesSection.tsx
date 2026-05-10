@@ -33,13 +33,13 @@ export function DeploymentTypesSection({
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/10" />
 
               <div className="relative flex h-full flex-col justify-end p-7 lg:p-9">
-                <div className="text-sm uppercase tracking-[0.2em] text-white/62">
+                <div className="text-base uppercase tracking-[0.18em] text-white/62">
                   {item.metrics[0]}
                 </div>
                 <div className="mt-2 text-3xl font-medium tracking-tight text-white lg:text-4xl">
                   {item.title}
                 </div>
-                <p className="mt-3 max-w-2xl text-base leading-7 text-white/80">
+                <p className="mt-3 max-w-2xl text-xl leading-8 text-white/80">
                   {item.subtitle}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">

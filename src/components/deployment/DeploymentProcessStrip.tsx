@@ -1,3 +1,4 @@
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { howItWorksSteps } from "@/content/howItWorks";
 
 export function DeploymentProcessStrip() {
@@ -5,15 +6,13 @@ export function DeploymentProcessStrip() {
     <section className="border-t border-black/10 bg-white px-6 py-24 lg:px-10 lg:py-32">
       <div className="mx-auto max-w-shell">
         <div className="mb-12 max-w-4xl">
-          <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
-            Deployment Process
-          </div>
+          <Eyebrow>Deployment Process</Eyebrow>
 
           <h2 className="mt-4 text-5xl font-medium tracking-tight text-sw-text lg:text-6xl">
-            Pre-Manufactured in the factory for rapid field deployment.
+            Pre-assembled in the factory for rapid field deployment.
           </h2>
 
-          <p className="mt-6 max-w-3xl text-xl leading-9 text-sw-muted">
+          <p className="mt-6 max-w-3xl text-2xl leading-9 text-sw-muted">
             The deployment strategy follows the same logic across site
             types: build more in the factory, reduce field work, adapt the
             support interface, and simplify operation.
@@ -26,7 +25,7 @@ export function DeploymentProcessStrip() {
               key={step.value}
               className="rounded-[1.5rem] border border-black/10 bg-sw-panel p-7 shadow-soft"
             >
-              <div className="mb-8 text-sm font-medium text-sw-green">
+              <div className="mb-8 text-base font-medium text-sw-green">
                 {step.value}
               </div>
 
@@ -34,7 +33,7 @@ export function DeploymentProcessStrip() {
                 {step.title}
               </h3>
 
-              <p className="mt-5 text-base leading-7 text-sw-muted">
+              <p className="mt-5 text-2xl leading-9 text-sw-muted">
                 {step.description}
               </p>
             </article>

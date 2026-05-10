@@ -85,7 +85,7 @@ export function DeploymentCarousel({ slides }: DeploymentCarouselProps) {
       </div>
 
       <div className="flex items-center justify-between gap-4 px-6 py-5">
-        <div className="text-sm text-black/55">
+        <div className="text-base text-black/55">
           {activeIndex + 1} / {slides.length}
         </div>
 

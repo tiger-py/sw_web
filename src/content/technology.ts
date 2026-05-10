@@ -144,7 +144,7 @@ export const technologyChapters: TechnologyChapter[] = [
   {
     slug: "rapid-deployment",
     eyebrow: "Breakthrough 03",
-    title: "Rapid deployment is the result of pre-manufacturing",
+    title: "Rapid deployment is the result of pre-assembled",
     subtitle:
       "Solar Waves arrives on site as a completed deployment object, not as a loose collection of parts. Field work can focus on positioning, support connection, electrical interface, and commissioning. The goal is not to remove infrastructure work entirely; it is to remove unnecessary field assembly from the solar system itself.",
     keywords: ["Containerized", "Rapid Deployment", "Fast Commissioning"],
@@ -166,7 +166,7 @@ export const technologyChapters: TechnologyChapter[] = [
       {
         title: "Fast commissioning",
         description:
-          "A pre-manufactured system reduces the number of variables that need to be resolved before energizing and operating the installation.",
+          "A pre-assembled system reduces the number of variables that need to be resolved before energizing and operating the installation.",
         image: "/images/technology/technology-deployment-live.webp",
       },
       {

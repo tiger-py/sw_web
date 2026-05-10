@@ -1,4 +1,5 @@
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { MetricCard } from "@/components/ui/MetricCard";
 import type { HeroContent, MetricItem } from "@/types/content";
 
@@ -18,9 +19,9 @@ export function ApplianceRevealSection({
     >
       <div className="mx-auto max-w-shell px-6 py-20 lg:px-10 lg:py-28">
         <div className="max-w-5xl">
-          <div className="mb-5 text-sm font-medium uppercase tracking-eyebrow text-sw-muted">
+          <Eyebrow className="mb-5 text-sw-muted">
             {content.eyebrow}
-          </div>
+          </Eyebrow>
 
           <h1 className="max-w-5xl text-5xl font-medium tracking-tight text-sw-text sm:text-6xl lg:text-7xl">
             {content.title}

@@ -1,4 +1,5 @@
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import type { MetricItem } from "@/types/content";
 
 type TechnicalPreviewSectionProps = {
@@ -20,15 +21,13 @@ export function TechnicalPreviewSection({
     <section className="border-t border-black/10 bg-sw-panel">
       <div className="mx-auto grid max-w-shell gap-10 px-6 py-40 lg:grid-cols-[0.95fr_1.05fr] lg:px-10 lg:py-48 lg:items-start">
         <div className="max-w-2xl">
-          <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
-            {eyebrow}
-          </div>
+          <Eyebrow>{eyebrow}</Eyebrow>
 
           <h2 className="mt-4 text-4xl font-medium tracking-tight text-sw-text lg:text-5xl">
             {title}
           </h2>
 
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-sw-muted">
+          <p className="mt-5 max-w-2xl text-2xl leading-9 text-sw-muted">
             {description}
           </p>
 
@@ -41,7 +40,7 @@ export function TechnicalPreviewSection({
                 <div className="text-2xl font-medium tracking-tight text-sw-text lg:text-3xl">
                   {metric.value}
                 </div>
-                <div className="text-sm leading-6 text-black/58 lg:text-base">
+                <div className="text-xl leading-8 text-black/58">
                   {metric.label}
                 </div>
               </div>

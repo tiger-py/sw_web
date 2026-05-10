@@ -20,7 +20,7 @@ export function SectionHeading({
       </h2>
 
       {description ? (
-        <p className="mt-6 max-w-3xl text-xl leading-9 text-sw-muted">
+        <p className="mt-6 max-w-3xl text-2xl leading-9 text-sw-muted">
           {description}
         </p>
       ) : null}

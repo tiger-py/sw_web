@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import type { DeploymentType } from "@/types/content";
 
 type DeploymentOverviewGridProps = {
@@ -22,21 +23,17 @@ export function DeploymentOverviewGrid({ items }: DeploymentOverviewGridProps) {
               />
 
               <div className="p-6 lg:p-7">
-                {item.eyebrow ? (
-                  <div className="text-sm font-medium uppercase tracking-eyebrow text-sw-eyebrow">
-                    {item.eyebrow}
-                  </div>
-                ) : null}
+                {item.eyebrow ? <Eyebrow>{item.eyebrow}</Eyebrow> : null}
 
                 <h2 className="mt-3 text-3xl font-medium tracking-tight text-sw-text">
                   {item.title}
                 </h2>
 
-                <p className="mt-4 text-lg leading-8 text-sw-muted">
+                <p className="mt-4 text-2xl leading-9 text-sw-muted">
                   {item.subtitle}
                 </p>
 
-                <div className="mt-6 text-sm font-medium uppercase tracking-[0.16em] text-sw-green">
+                <div className="mt-6 text-base font-medium uppercase tracking-[0.16em] text-sw-green">
                   Learn more
                 </div>
               </div>

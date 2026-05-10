@@ -4,6 +4,7 @@ import {
   simulationScience,
 } from "@/content/simulation";
 import { FinalCTASection } from "@/components/sections/FinalCTASection";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export const metadata = {
   title: "Simulation | Solar Waves",
@@ -28,9 +29,9 @@ export default function SimulationPage() {
 
         <div className="relative mx-auto flex min-h-[72vh] max-w-shell items-end px-6 py-24 lg:px-10 lg:py-32">
           <div className="max-w-5xl">
-            <div className="mb-5 text-sm font-medium uppercase tracking-eyebrow text-white">
+            <Eyebrow tone="light" className="mb-5">
               {simulationIntro.eyebrow}
-            </div>
+            </Eyebrow>
 
             <div className="flex flex-col gap-5 lg:flex-row lg:items-center">
               <img
@@ -54,15 +55,15 @@ export default function SimulationPage() {
       <section className="bg-white px-6 py-24 lg:px-10 lg:py-32">
         <div className="mx-auto max-w-shell">
           <div className="mb-12 max-w-4xl">
-            <div className="mb-3 text-sm font-medium uppercase tracking-eyebrow text-sw-green">
+            <Eyebrow className="mb-3 text-sw-green">
               How to use the simulation
-            </div>
+            </Eyebrow>
 
             <h2 className="text-5xl font-medium tracking-tight text-black lg:text-6xl">
               Start with the site.
             </h2>
 
-            <p className="mt-6 max-w-3xl text-xl leading-9 text-black/70">
+            <p className="mt-6 max-w-3xl text-2xl leading-9 text-black/70">
               Follow the steps below before using the power output and water savings simulator. The model
               is best used as an early-stage planning tool for comparing site
               conditions, deployment types, and performance.
@@ -75,7 +76,7 @@ export default function SimulationPage() {
                 key={step.value}
                 className="rounded-[1.5rem] border border-black/10 bg-sw-panel p-7"
               >
-                <div className="mb-8 text-sm font-medium text-sw-green">
+                <div className="mb-8 text-base font-medium text-sw-green">
                   {step.value}
                 </div>
 
@@ -83,7 +84,7 @@ export default function SimulationPage() {
                   {step.title}
                 </h3>
 
-                <p className="mt-5 text-base leading-7 text-black/65">
+                <p className="mt-5 text-2xl leading-9 text-black/65">
                   {step.description}
                 </p>
               </article>
@@ -95,15 +96,15 @@ export default function SimulationPage() {
       <section className="bg-sw-panel px-6 py-24 lg:px-10 lg:py-32">
         <div className="mx-auto max-w-shell">
           <div className="mb-10 max-w-4xl">
-            <div className="mb-3 text-sm font-medium uppercase tracking-eyebrow text-sw-green">
+            <Eyebrow className="mb-3 text-sw-green">
               Interactive Model
-            </div>
+            </Eyebrow>
 
             <h2 className="text-5xl font-medium tracking-tight text-black lg:text-6xl">
               Power output and water-savings simulation
             </h2>
 
-            <p className="mt-6 max-w-3xl text-xl leading-9 text-black/70">
+            <p className="mt-6 max-w-3xl text-2xl leading-9 text-black/70">
               Configure the array, select a location, compare deployment
               conditions, and review performance metrics inside the
               live simulator.
@@ -123,15 +124,15 @@ export default function SimulationPage() {
       <section className="bg-white px-6 py-24 lg:px-10 lg:py-32">
         <div className="mx-auto grid max-w-shell gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <div className="mb-3 text-sm font-medium uppercase tracking-eyebrow text-sw-green">
+            <Eyebrow className="mb-3 text-sw-green">
               {simulationScience.eyebrow}
-            </div>
+            </Eyebrow>
 
             <h2 className="text-5xl font-medium tracking-tight text-black lg:text-6xl">
               {simulationScience.title}
             </h2>
 
-            <p className="mt-6 text-xl leading-9 text-black/70">
+            <p className="mt-6 text-2xl leading-9 text-black/70">
               {simulationScience.description}
             </p>
           </div>
@@ -146,7 +147,7 @@ export default function SimulationPage() {
                   {item.title}
                 </h3>
 
-                <p className="mt-5 text-base leading-7 text-black/65">
+                <p className="mt-5 text-2xl leading-9 text-black/65">
                   {item.body}
                 </p>
               </article>
